@@ -6,13 +6,15 @@ const services = [
     id: 'websites',
     icon: '⚡',
     accent: '#4f8ef7',
+    accentBg: 'rgba(79,142,247,0.12)',
+    accentBorder: 'rgba(79,142,247,0.25)',
     name: 'AI Website Builds',
     tagline: 'Premium sites. Delivered in days.',
     desc: 'We build fast, beautiful, high-converting websites using AI-accelerated development. You get the quality of a $20k agency engagement at a fraction of the cost — and a fraction of the time.',
     highlights: [
-      { label: 'Avg. delivery', value: '5–7 days' },
-      { label: 'PageSpeed', value: '90+' },
-      { label: 'Starting at', value: '$1,500' },
+      { label: 'Avg. delivery', value: '5–7 days', icon: '⚡' },
+      { label: 'PageSpeed', value: '90+', icon: '🎯' },
+      { label: 'Starting at', value: '$1,500', icon: '💰' },
     ],
     features: [
       { name: 'Custom Design', desc: 'Fully bespoke — no templates, no Squarespace. Every layout built to fit your brand.' },
@@ -20,26 +22,28 @@ const services = [
       { name: 'SEO Ready', desc: 'Semantic HTML, meta tags, sitemaps, structured data — all set up from day one.' },
       { name: 'Mobile Optimized', desc: 'Pixel-perfect on every device. We test on real devices, not just browser tools.' },
       { name: 'Hosting Setup', desc: 'We configure your domain, DNS, and cloud hosting (Cloudflare Pages, Vercel, Netlify).' },
-      { name: '30-Day Support', desc: 'Free edits and bug fixes for 30 days post-launch. We don\'t disappear after delivery.' },
+      { name: '30-Day Support', desc: "Free edits and bug fixes for 30 days post-launch. We don't disappear after delivery." },
     ],
     faqs: [
-      { q: 'How fast can you really build a website?', a: 'Our fastest delivery has been under 24 hours for a single-page site. Most 5–10 page websites ship in 5–7 business days from the time we receive your brief and assets. E-commerce and custom-integration builds take 2–3 weeks.' },
-      { q: 'What do I need to provide?', a: 'Brand assets (logo, colors, fonts if you have them), any photos or copy you want used, and a clear brief about your business. We can work with what you have — if you don\'t have professional photos, we know how to source appropriate stock.' },
-      { q: 'What tech stack do you use?', a: 'We typically use Astro or Next.js for performance, Tailwind CSS for styling, and deploy to Cloudflare Pages or Vercel. For e-commerce, we use headless Shopify or Stripe integrations. We always choose the right tool for the job — not just the trendy one.' },
-      { q: 'Can you redesign my existing website?', a: 'Absolutely. Redesigns are a big part of our work. We audit your current site, identify what\'s hurting your conversions and SEO, and rebuild it properly.' },
+      { q: 'How fast can you really build a website?', a: "Our fastest delivery has been under 24 hours for a single-page site. Most 5–10 page websites ship in 5–7 business days from the time we receive your brief and assets. E-commerce and custom-integration builds take 2–3 weeks." },
+      { q: 'What do I need to provide?', a: "Brand assets (logo, colors, fonts if you have them), any photos or copy you want used, and a clear brief about your business. We can work with what you have — if you don't have professional photos, we know how to source appropriate stock." },
+      { q: 'What tech stack do you use?', a: "We typically use Astro or Next.js for performance, Tailwind CSS for styling, and deploy to Cloudflare Pages or Vercel. For e-commerce, we use headless Shopify or Stripe integrations. We always choose the right tool for the job — not just the trendy one." },
+      { q: 'Can you redesign my existing website?', a: "Absolutely. Redesigns are a big part of our work. We audit your current site, identify what's hurting your conversions and SEO, and rebuild it properly." },
     ],
   },
   {
     id: 'marketing',
     icon: '📈',
     accent: '#a78bfa',
+    accentBg: 'rgba(167,139,250,0.1)',
+    accentBorder: 'rgba(167,139,250,0.22)',
     name: 'Digital Marketing',
     tagline: 'Grow your audience. Drive revenue.',
-    desc: 'We run performance marketing campaigns across Google and Meta, manage your SEO and content strategy, and deliver analytics that show exactly what\'s working. You focus on running your business — we\'ll handle the traffic.',
+    desc: "We run performance marketing campaigns across Google and Meta, manage your SEO and content strategy, and deliver analytics that show exactly what's working. You focus on running your business — we'll handle the traffic.",
     highlights: [
-      { label: 'Avg. ROAS', value: '3–5x' },
-      { label: 'Setup time', value: '1 week' },
-      { label: 'Starting at', value: '$800/mo' },
+      { label: 'Avg. ROAS', value: '3–5x', icon: '📊' },
+      { label: 'Setup time', value: '1 week', icon: '🚀' },
+      { label: 'Starting at', value: '$800/mo', icon: '💳' },
     ],
     features: [
       { name: 'Google Ads', desc: 'Search, Display, and Performance Max campaigns. Precise targeting, constant optimization.' },
@@ -50,37 +54,39 @@ const services = [
       { name: 'Monthly Reporting', desc: 'Real dashboards. No vanity metrics. You see exactly what your investment is returning.' },
     ],
     faqs: [
-      { q: 'How much should I budget for ad spend?', a: 'We typically recommend a minimum of $500–$1,000/month in ad spend to get meaningful data and results. Our management fee is separate. Many clients start small, prove the channel, then scale up once they\'re seeing ROI.' },
-      { q: 'How long before I see results?', a: 'Google Ads can start generating leads within 1–2 weeks of launch. SEO is a longer game — expect meaningful movement in 3–6 months, with compounding results after that. We\'ll always be honest with you about timelines.' },
-      { q: 'Do you require long-term contracts?', a: 'Our standard engagement is month-to-month after an initial 3-month commitment (needed to properly set up and optimize campaigns). We earn your continued business every month.' },
-      { q: 'Can you take over existing campaigns?', a: 'Yes, and we often do. We audit your current setup, identify wasted spend and missed opportunities, and gradually migrate to our structure without disrupting what\'s working.' },
+      { q: 'How much should I budget for ad spend?', a: "We typically recommend a minimum of $500–$1,000/month in ad spend to get meaningful data and results. Our management fee is separate. Many clients start small, prove the channel, then scale up once they're seeing ROI." },
+      { q: 'How long before I see results?', a: "Google Ads can start generating leads within 1–2 weeks of launch. SEO is a longer game — expect meaningful movement in 3–6 months, with compounding results after that. We'll always be honest with you about timelines." },
+      { q: 'Do you require long-term contracts?', a: "Our standard engagement is month-to-month after an initial 3-month commitment (needed to properly set up and optimize campaigns). We earn your continued business every month." },
+      { q: 'Can you take over existing campaigns?', a: "Yes, and we often do. We audit your current setup, identify wasted spend and missed opportunities, and gradually migrate to our structure without disrupting what's working." },
     ],
   },
   {
     id: 'consulting',
     icon: '🛠️',
     accent: '#34d399',
+    accentBg: 'rgba(52,211,153,0.08)',
+    accentBorder: 'rgba(52,211,153,0.2)',
     name: 'IT Consulting',
     tagline: 'Tech that works for your business.',
-    desc: 'We help business owners and leadership teams make smarter technology decisions — whether that\'s auditing your current stack, implementing AI tools, automating workflows, or integrating new software. No jargon. No upsells. Just practical advice.',
+    desc: "We help business owners and leadership teams make smarter technology decisions — whether that's auditing your current stack, implementing AI tools, automating workflows, or integrating new software. No jargon. No upsells. Just practical advice.",
     highlights: [
-      { label: 'Engagement', value: 'Project-based' },
-      { label: 'Response time', value: '< 24 hrs' },
-      { label: 'Starting at', value: '$150/hr' },
+      { label: 'Engagement', value: 'Project-based', icon: '📁' },
+      { label: 'Response time', value: '< 24 hrs', icon: '⏱️' },
+      { label: 'Starting at', value: '$150/hr', icon: '💼' },
     ],
     features: [
       { name: 'Tech Stack Audits', desc: 'We review your current tools, identify redundancies, security gaps, and cost-saving opportunities.' },
       { name: 'AI Implementation', desc: 'From ChatGPT to custom AI workflows — we help you integrate AI where it actually makes a difference.' },
       { name: 'Process Automation', desc: 'Zapier, Make, n8n, and custom scripts. We automate repetitive tasks so your team can focus on what matters.' },
       { name: 'Software Integration', desc: 'Connect your CRM, ERP, POS, and other tools so data flows seamlessly across your business.' },
-      { name: 'Team Training', desc: 'We don\'t just set things up — we train your team so they can maintain and build on what we implement.' },
+      { name: 'Team Training', desc: "We don't just set things up — we train your team so they can maintain and build on what we implement." },
       { name: 'Ongoing Support', desc: 'Monthly retainers available for businesses that want a trusted tech partner on call.' },
     ],
     faqs: [
-      { q: 'Do I need to be technical to work with you?', a: 'Not at all. We specialize in translating complex technology into business language. If you can articulate the business problem, we\'ll figure out the tech solution.' },
-      { q: 'What size business do you typically work with?', a: 'Primarily small to mid-size businesses with 2–200 employees. Companies big enough to have real tech problems, small enough that they can\'t afford a full IT department.' },
-      { q: 'How do you structure consulting engagements?', a: 'Smaller projects are billed hourly at $150/hr. Larger engagements (multi-week implementation projects) are quoted as fixed-price. Ongoing advisory retainers start at $500/month.' },
-      { q: 'Can you help us choose between software vendors?', a: 'This is one of our most common requests. We have no vendor relationships or kickbacks, so our recommendations are purely based on what\'s right for your business.' },
+      { q: 'Do I need to be technical to work with you?', a: "Not at all. We specialize in translating complex technology into business language. If you can articulate the business problem, we'll figure out the tech solution." },
+      { q: 'What size business do you typically work with?', a: "Primarily small to mid-size businesses with 2–200 employees. Companies big enough to have real tech problems, small enough that they can't afford a full IT department." },
+      { q: 'How do you structure consulting engagements?', a: "Smaller projects are billed hourly at $150/hr. Larger engagements (multi-week implementation projects) are quoted as fixed-price. Ongoing advisory retainers start at $500/month." },
+      { q: 'Can you help us choose between software vendors?', a: "This is one of our most common requests. We have no vendor relationships or kickbacks, so our recommendations are purely based on what's right for your business." },
     ],
   },
 ];
@@ -91,6 +97,7 @@ const pricingPlans = [
     price: '$1,500',
     period: 'one-time',
     desc: 'Get online fast with a clean, professional site.',
+    badge: null,
     features: [
       '1–3 pages',
       'Custom design',
@@ -109,6 +116,7 @@ const pricingPlans = [
     price: '$2,500',
     period: 'one-time',
     desc: 'The full website your business deserves.',
+    badge: 'Most Popular',
     features: [
       '5–10 pages',
       'Custom design system',
@@ -121,7 +129,7 @@ const pricingPlans = [
       'PageSpeed 90+ guaranteed',
     ],
     notIncluded: ['E-commerce checkout', 'Booking system'],
-    cta: 'Most Popular',
+    cta: 'Start Project',
     highlight: true,
   },
   {
@@ -129,6 +137,7 @@ const pricingPlans = [
     price: '$4,500+',
     period: 'one-time',
     desc: 'Complex builds with custom functionality.',
+    badge: null,
     features: [
       'Unlimited pages',
       'E-commerce / booking',
@@ -149,6 +158,7 @@ const pricingPlans = [
     price: '$800',
     period: 'per month',
     desc: 'Ongoing digital marketing management.',
+    badge: null,
     features: [
       'Google Ads management',
       'Meta Ads management',
@@ -163,6 +173,22 @@ const pricingPlans = [
     highlight: false,
   },
 ];
+
+const comparisonRows = [
+  ['Pages', '1–3', '5–10', 'Unlimited'],
+  ['Delivery time', '3–5 days', '5–7 days', '10–14 days'],
+  ['Custom design', '✓', '✓', '✓'],
+  ['Mobile optimized', '✓', '✓', '✓'],
+  ['Basic SEO', '✓', '✓', '✓'],
+  ['Full SEO package', '—', '✓', '✓'],
+  ['Contact forms', '—', '✓', '✓'],
+  ['CMS / Blog', '—', 'Optional', '✓'],
+  ['E-commerce', '—', '—', '✓'],
+  ['Custom integrations', '—', '—', '✓'],
+  ['PageSpeed guarantee', '—', '90+', '90+'],
+  ['Post-launch support', '14 days', '30 days', '60 days'],
+  ['Price', '$1,500', '$2,500', '$4,500+'],
+];
 ---
 
 <!doctype html>
@@ -171,13 +197,22 @@ const pricingPlans = [
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Consultably Services — AI Website Builds, Digital Marketing, and IT Consulting. Transparent pricing, fast delivery, real results." />
-  <title>Services & Pricing | Consultably</title>
+  <title>Services &amp; Pricing | Consultably</title>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <style>
     @keyframes gradient-shift {
       0%, 100% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
     }
+    @keyframes fade-up {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes float-slow {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
     .hero-gradient-text {
       background: linear-gradient(135deg, #60a5fa, #a78bfa, #f472b6, #60a5fa);
       background-size: 300% 300%;
@@ -186,140 +221,253 @@ const pricingPlans = [
       background-clip: text;
       animation: gradient-shift 4s ease infinite;
     }
+
+    /* Nav */
     .nav-scrolled {
-      background: rgba(8, 12, 20, 0.98) !important;
-      border-bottom-color: rgba(255,255,255,0.1) !important;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+      background: rgba(8, 12, 20, 0.97) !important;
+      border-bottom-color: rgba(255,255,255,0.08) !important;
+      box-shadow: 0 4px 32px rgba(0,0,0,0.5);
+      backdrop-filter: blur(20px);
     }
     .nav-transparent {
       background: transparent !important;
       border-bottom-color: transparent !important;
     }
+
+    /* Mobile nav */
+    #mobile-menu {
+      transition: opacity 0.25s ease, transform 0.25s ease;
+    }
+    #mobile-menu.hidden { opacity: 0; transform: translateY(-8px); pointer-events: none; }
+    #mobile-menu.open   { opacity: 1; transform: translateY(0); pointer-events: auto; }
+    .hamburger-line {
+      display: block; width: 22px; height: 2px;
+      background: currentColor; border-radius: 2px;
+      transition: transform 0.25s ease, opacity 0.25s ease;
+    }
+    #menu-btn.open .hamburger-line:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+    #menu-btn.open .hamburger-line:nth-child(2) { opacity: 0; }
+    #menu-btn.open .hamburger-line:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+    /* Anchor pill nav */
+    .anchor-pill {
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+    .anchor-pill:hover, .anchor-pill.active {
+      background: rgba(79,142,247,0.12);
+      border-color: rgba(79,142,247,0.3);
+      color: white;
+    }
+    .anchor-pill.active { color: #4f8ef7; }
+
+    /* Feature cards */
     .feature-card {
-      transition: transform 0.25s ease, border-color 0.25s ease;
+      transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
     }
-    .feature-card:hover {
-      transform: translateY(-2px);
+    .feature-card:hover { transform: translateY(-3px); }
+
+    /* Pricing cards */
+    .pricing-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .pricing-card:hover { transform: translateY(-6px); }
+
+    /* Service section accent line */
+    .service-accent-line {
+      height: 2px;
+      border-radius: 2px;
     }
-    .pricing-card {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    /* FAQ */
+    .faq-item { transition: border-color 0.2s ease; }
+
+    /* Comparison table */
+    .compare-col-highlight {
+      background: rgba(79,142,247,0.05);
     }
-    .pricing-card:hover {
-      transform: translateY(-4px);
+
+    /* Smooth scroll */
+    html { scroll-behavior: smooth; }
+
+    /* Reveal */
+    .reveal {
+      opacity: 0; transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
     }
+    .reveal.visible { opacity: 1; transform: none; }
+
+    /* Scrollbar hide for anchor nav */
+    .scrollbar-hide::-webkit-scrollbar { display: none; }
+    .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
   </style>
 </head>
 <body class="bg-[#080c14] text-white">
 
-<!-- NAV -->
-<header id="main-nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 nav-scrolled border-b border-white/[0.08]">
+<!-- ── NAV ── -->
+<header id="main-nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 nav-scrolled border-b border-white/[0.07]">
   <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-    <a href="/" class="flex items-center gap-2.5">
+    <a href="/" class="flex items-center gap-2.5 flex-shrink-0">
       <div class="w-8 h-8 bg-gradient-to-br from-[#4f8ef7] to-[#7c3aed] rounded-lg flex items-center justify-center text-white font-bold text-sm shadow-lg shadow-[#4f8ef7]/30">C</div>
       <span class="font-bold text-lg tracking-tight">Consultably</span>
     </a>
 
     <nav class="hidden md:flex items-center gap-8">
       {[['Home','/'],['Work','/#work'],['Process','/#process'],['FAQ','/#faq']].map(([l,h]) => (
-        <a href={h} class="text-white/60 hover:text-white text-sm font-medium transition-colors duration-200">{l}</a>
+        <a href={h} class="text-white/55 hover:text-white text-sm font-medium transition-colors duration-200 relative group">
+          {l}
+          <span class="absolute -bottom-0.5 left-0 w-0 h-px bg-[#4f8ef7] group-hover:w-full transition-all duration-300"></span>
+        </a>
       ))}
     </nav>
 
     <div class="flex items-center gap-3">
       <a href="/#contact"
-        class="bg-gradient-to-r from-[#4f8ef7] to-[#7c3aed] hover:opacity-90 text-white px-5 py-2.5 rounded-lg text-sm font-semibold transition-opacity shadow-lg shadow-[#4f8ef7]/20">
+        class="hidden sm:flex items-center bg-gradient-to-r from-[#4f8ef7] to-[#7c3aed] hover:opacity-90 text-white px-5 py-2.5 rounded-lg text-sm font-semibold transition-all shadow-lg shadow-[#4f8ef7]/20 hover:shadow-[#4f8ef7]/35 hover:-translate-y-0.5">
         Get Started →
       </a>
+      <button id="menu-btn" class="md:hidden flex flex-col gap-[5px] p-2 text-white/70 hover:text-white transition-colors" aria-label="Toggle menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
     </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-[#080c14]/98 backdrop-blur-xl border-b border-white/[0.08] px-6 pb-6 pt-2">
+    <nav class="flex flex-col gap-1">
+      {[['Home','/'],['Work','/#work'],['FAQ','/#faq'],['Contact','/#contact']].map(([l,h]) => (
+        <a href={h} class="mobile-nav-link py-3 text-white/60 hover:text-white text-base font-medium transition-colors border-b border-white/[0.05] last:border-0">{l}</a>
+      ))}
+    </nav>
+    <a href="/#contact" class="mt-4 block text-center bg-gradient-to-r from-[#4f8ef7] to-[#7c3aed] text-white py-3.5 rounded-xl font-bold text-sm">
+      Start Your Project →
+    </a>
   </div>
 </header>
 
-<!-- PAGE HEADER -->
-<section class="relative pt-36 pb-20 px-6 overflow-hidden">
-  <div class="absolute inset-0 opacity-[0.12]" style="background-image: linear-gradient(rgba(79,142,247,0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(79,142,247,0.15) 1px, transparent 1px); background-size: 60px 60px;"></div>
-  <div class="absolute top-1/3 left-1/4 w-96 h-96 bg-[#4f8ef7]/10 rounded-full blur-[120px] pointer-events-none"></div>
-  <div class="absolute bottom-0 right-1/4 w-80 h-80 bg-[#7c3aed]/10 rounded-full blur-[100px] pointer-events-none"></div>
+<!-- ── PAGE HEADER ── -->
+<section class="relative pt-36 pb-24 px-6 overflow-hidden">
+  <!-- Grid -->
+  <div class="absolute inset-0 opacity-[0.1]" style="background-image: linear-gradient(rgba(79,142,247,0.18) 1px, transparent 1px), linear-gradient(90deg, rgba(79,142,247,0.18) 1px, transparent 1px); background-size: 60px 60px;"></div>
+  <!-- Orbs -->
+  <div class="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-[#4f8ef7]/8 rounded-full blur-[140px] pointer-events-none" style="animation: float-slow 10s ease-in-out infinite;"></div>
+  <div class="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-[#7c3aed]/8 rounded-full blur-[120px] pointer-events-none" style="animation: float-slow 12s ease-in-out infinite 2s;"></div>
 
   <div class="relative z-10 max-w-3xl mx-auto text-center">
-    <div class="inline-flex items-center gap-2 bg-white/[0.06] border border-white/[0.1] rounded-full px-4 py-1.5 text-xs font-medium text-white/60 mb-7">
-      Services & Pricing
+    <div class="inline-flex items-center gap-2 bg-white/[0.06] border border-white/[0.1] rounded-full px-4 py-1.5 text-xs font-medium text-white/60 mb-7 backdrop-blur-sm" style="animation: fade-up 0.5s ease both;">
+      <span class="w-1.5 h-1.5 rounded-full bg-[#4f8ef7] animate-pulse"></span>
+      Services &amp; Pricing
     </div>
-    <h1 class="text-4xl md:text-6xl font-bold mb-5 leading-tight">
+    <h1 class="text-4xl md:text-6xl font-bold mb-5 leading-tight" style="animation: fade-up 0.5s ease 0.1s both;">
       Everything you need to<br/><span class="hero-gradient-text">compete online</span>
     </h1>
-    <p class="text-white/50 text-lg max-w-xl mx-auto leading-relaxed">
+    <p class="text-white/50 text-lg max-w-xl mx-auto leading-relaxed" style="animation: fade-up 0.5s ease 0.2s both;">
       Three services. Transparent pricing. No lock-ins. We work as an extension of your team — not as an expensive vendor.
     </p>
+
+    <!-- Quick jump buttons -->
+    <div class="flex flex-wrap justify-center gap-3 mt-8" style="animation: fade-up 0.5s ease 0.3s both;">
+      {services.map(s => (
+        <a href={`#${s.id}`} class="inline-flex items-center gap-1.5 px-4 py-2 bg-white/[0.05] border border-white/[0.1] rounded-full text-sm font-medium text-white/60 hover:text-white hover:border-white/25 hover:bg-white/[0.08] transition-all duration-200">
+          <span>{s.icon}</span>{s.name}
+        </a>
+      ))}
+      <a href="#pricing" class="inline-flex items-center gap-1.5 px-4 py-2 bg-white/[0.05] border border-white/[0.1] rounded-full text-sm font-medium text-white/60 hover:text-white hover:border-white/25 hover:bg-white/[0.08] transition-all duration-200">
+        💳 Pricing
+      </a>
+    </div>
   </div>
 </section>
 
-<!-- SERVICE ANCHOR LINKS -->
+<!-- ── STICKY ANCHOR NAV ── -->
 <div class="sticky top-[65px] z-40 bg-[#080c14]/95 backdrop-blur-md border-b border-white/[0.06] px-6 py-3">
   <div class="max-w-7xl mx-auto flex gap-2 overflow-x-auto scrollbar-hide">
     {services.map(s => (
-      <a href={`#${s.id}`} class="flex-shrink-0 flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium text-white/50 hover:text-white hover:bg-white/[0.06] border border-transparent hover:border-white/10 transition-all duration-200">
+      <a href={`#${s.id}`} class="anchor-pill flex-shrink-0 flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium text-white/50 border border-transparent">
         <span>{s.icon}</span>{s.name}
       </a>
     ))}
-    <a href="#pricing" class="flex-shrink-0 flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium text-white/50 hover:text-white hover:bg-white/[0.06] border border-transparent hover:border-white/10 transition-all duration-200">
+    <a href="#pricing" class="anchor-pill flex-shrink-0 flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium text-white/50 border border-transparent">
       💳 Pricing
     </a>
   </div>
 </div>
 
-<!-- SERVICES DETAIL -->
+<!-- ── SERVICE DETAIL SECTIONS ── -->
 {services.map((s, idx) => (
   <section id={s.id} class={`py-24 px-6 ${idx % 2 === 1 ? 'bg-[#0b0f1c]' : 'bg-[#080c14]'}`}>
     <div class="max-w-7xl mx-auto">
-      <!-- Service header -->
-      <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
-        <div>
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12 rounded-2xl flex items-center justify-center text-2xl" style={`background: ${s.accent}18; border: 1px solid ${s.accent}30`}>{s.icon}</div>
-            <div>
-              <p class="text-xs font-semibold uppercase tracking-[0.3em] mb-0.5" style={`color: ${s.accent}`}>Service 0{idx + 1}</p>
-              <h2 class="text-2xl font-bold">{s.name}</h2>
-            </div>
-          </div>
-          <p class="text-white/35 text-sm font-semibold uppercase tracking-widest mb-3">{s.tagline}</p>
-          <p class="text-white/60 text-base leading-relaxed">{s.desc}</p>
-        </div>
 
-        <!-- Highlight stats -->
-        <div class="grid grid-cols-3 gap-4">
-          {s.highlights.map(h => (
-            <div class="text-center p-5 bg-white/[0.03] border border-white/[0.07] rounded-2xl hover:border-white/15 transition-colors">
-              <p class="text-2xl font-bold mb-1" style={`color: ${s.accent}`}>{h.value}</p>
-              <p class="text-white/35 text-xs uppercase tracking-widest">{h.label}</p>
+      <!-- Section header -->
+      <div class="reveal mb-16">
+        <!-- Accent line -->
+        <div class="service-accent-line w-12 mb-6" style={`background: linear-gradient(90deg, ${s.accent}, transparent);`}></div>
+
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <!-- Left: text -->
+          <div>
+            <div class="inline-flex items-center gap-3 mb-5 px-4 py-2 rounded-xl border" style={`background: ${s.accentBg}; border-color: ${s.accentBorder};`}>
+              <span class="text-2xl">{s.icon}</span>
+              <div>
+                <p class="text-xs font-semibold uppercase tracking-[0.25em]" style={`color: ${s.accent}`}>Service 0{idx + 1}</p>
+                <h2 class="text-xl font-bold leading-tight">{s.name}</h2>
+              </div>
+            </div>
+            <p class="text-white/35 text-sm font-semibold uppercase tracking-widest mb-4">{s.tagline}</p>
+            <p class="text-white/60 text-base leading-relaxed mb-6">{s.desc}</p>
+            <a href="/#contact" class="inline-flex items-center gap-2 font-semibold text-sm transition-all hover:-translate-y-0.5" style={`color: ${s.accent}`}>
+              Start with {s.name.split(' ')[0]}
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+          </div>
+
+          <!-- Right: stat highlights -->
+          <div class="grid grid-cols-3 gap-4">
+            {s.highlights.map(h => (
+              <div class="text-center p-5 rounded-2xl border hover:border-white/20 transition-all duration-300 hover:-translate-y-1" style={`background: ${s.accentBg}; border-color: ${s.accentBorder};`}>
+                <div class="text-2xl mb-2">{h.icon}</div>
+                <p class="text-xl font-bold mb-1 leading-none" style={`color: ${s.accent}`}>{h.value}</p>
+                <p class="text-white/35 text-xs uppercase tracking-widest leading-tight">{h.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature grid -->
+      <div class="mb-16">
+        <div class="flex items-center gap-3 mb-6">
+          <h3 class="text-base font-bold text-white/60 uppercase tracking-widest text-sm">What's included</h3>
+          <div class="flex-1 h-px bg-white/[0.06]"></div>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {s.features.map(f => (
+            <div class="feature-card group p-5 rounded-xl border hover:border-white/20" style={`background: rgba(255,255,255,0.025); border-color: rgba(255,255,255,0.07);`}>
+              <div class="flex items-center gap-2.5 mb-2.5">
+                <div class="w-5 h-5 rounded-md flex items-center justify-center flex-shrink-0" style={`background: ${s.accentBg}; border: 1px solid ${s.accentBorder};`}>
+                  <svg class="w-3 h-3" style={`color: ${s.accent}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                  </svg>
+                </div>
+                <h4 class="font-semibold text-sm group-hover:text-white transition-colors">{f.name}</h4>
+              </div>
+              <p class="text-white/40 text-xs leading-relaxed pl-7">{f.desc}</p>
             </div>
           ))}
         </div>
       </div>
 
-      <!-- Features grid -->
-      <h3 class="text-lg font-bold mb-6 text-white/70">What's included</h3>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-16">
-        {s.features.map(f => (
-          <div class="feature-card p-5 bg-white/[0.03] border border-white/[0.07] rounded-xl hover:border-white/15">
-            <div class="flex items-center gap-2 mb-2">
-              <svg class="w-4 h-4 flex-shrink-0" style={`color: ${s.accent}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
-              </svg>
-              <h4 class="font-semibold text-sm">{f.name}</h4>
-            </div>
-            <p class="text-white/40 text-xs leading-relaxed pl-6">{f.desc}</p>
-          </div>
-        ))}
-      </div>
-
       <!-- Service FAQ -->
       <div class="max-w-3xl">
-        <h3 class="text-lg font-bold mb-5 text-white/70">Frequently asked</h3>
+        <div class="flex items-center gap-3 mb-6">
+          <h3 class="text-base font-bold text-white/60 uppercase tracking-widest text-sm">Frequently asked</h3>
+          <div class="flex-1 h-px bg-white/[0.06]"></div>
+        </div>
         <div class="space-y-3" id={`faq-${s.id}`}>
-          {s.faqs.map((f, fi) => (
-            <div class="bg-white/[0.03] border border-white/[0.07] hover:border-white/15 rounded-xl overflow-hidden faq-item transition-colors duration-200">
+          {s.faqs.map((f) => (
+            <div class="faq-item bg-white/[0.025] border border-white/[0.07] hover:border-white/15 rounded-xl overflow-hidden">
               <button class="w-full text-left px-5 py-4 flex items-center justify-between gap-4 faq-btn">
-                <span class="font-medium text-sm">{f.q}</span>
+                <span class="font-medium text-sm leading-snug">{f.q}</span>
                 <div class="w-5 h-5 rounded-full border border-white/20 flex items-center justify-center flex-shrink-0">
                   <svg class="w-2.5 h-2.5 text-white/40 faq-icon transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 5v14M5 12h14"/>
@@ -337,10 +485,10 @@ const pricingPlans = [
   </section>
 ))}
 
-<!-- PRICING COMPARISON TABLE -->
+<!-- ── PRICING ── -->
 <section id="pricing" class="py-28 px-6 bg-[#0b0f1c]">
   <div class="max-w-7xl mx-auto">
-    <div class="text-center mb-16">
+    <div class="text-center mb-16 reveal">
       <p class="text-[#4f8ef7] text-xs font-semibold uppercase tracking-[0.3em] mb-3">Pricing</p>
       <h2 class="text-4xl md:text-5xl font-bold mb-4">Transparent pricing</h2>
       <p class="text-white/50 text-lg max-w-xl mx-auto">No hourly billing surprises. No hidden fees. Clear scope, clear deliverables, clear price.</p>
@@ -348,49 +496,57 @@ const pricingPlans = [
 
     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
       {pricingPlans.map(plan => (
-        <div class={`pricing-card relative rounded-2xl p-7 flex flex-col ${plan.highlight
-          ? 'bg-gradient-to-br from-[#4f8ef7]/[0.14] to-[#7c3aed]/[0.14] border border-[#4f8ef7]/50 shadow-2xl shadow-[#4f8ef7]/15'
+        <div class={`pricing-card relative rounded-2xl p-7 flex flex-col h-full ${plan.highlight
+          ? 'bg-gradient-to-br from-[#4f8ef7]/[0.14] to-[#7c3aed]/[0.14] border border-[#4f8ef7]/50 shadow-2xl shadow-[#4f8ef7]/15 -translate-y-2'
           : 'bg-white/[0.04] border border-white/[0.09] hover:border-white/25 hover:shadow-xl hover:shadow-white/5'} transition-all duration-300`}>
-          {plan.highlight && (
+          {plan.badge && (
             <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-[#4f8ef7] to-[#7c3aed] text-white text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest whitespace-nowrap shadow-lg shadow-[#4f8ef7]/30">
-              Most Popular
+              {plan.badge}
             </div>
           )}
-          <h3 class="font-bold text-base mb-2">{plan.name}</h3>
-          <div class="mb-1">
-            <span class="text-3xl font-bold">{plan.price}</span>
-            <span class="text-white/30 text-sm ml-1">/ {plan.period}</span>
-          </div>
-          <p class="text-white/40 text-xs mb-6 leading-relaxed">{plan.desc}</p>
 
-          <div class="flex-1">
-            <p class="text-white/25 text-xs uppercase tracking-widest mb-3">Includes</p>
-            <ul class="space-y-2 mb-5">
-              {plan.features.map(f => (
-                <li class="flex items-start gap-2 text-xs text-white/60">
-                  <svg class={`w-3.5 h-3.5 mt-0.5 flex-shrink-0 ${plan.highlight ? 'text-[#4f8ef7]' : 'text-green-400/70'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
-                  </svg>
-                  {f}
-                </li>
-              ))}
-            </ul>
-            {plan.notIncluded.length > 0 && (
+          <div class="mb-5">
+            <h3 class="font-bold text-base mb-2 leading-tight">{plan.name}</h3>
+            <div class="flex items-baseline gap-1.5 mb-2">
+              <span class="text-3xl font-bold">{plan.price}</span>
+              <span class="text-white/30 text-sm">/ {plan.period}</span>
+            </div>
+            <p class="text-white/40 text-xs leading-relaxed">{plan.desc}</p>
+          </div>
+
+          <div class="flex-1 space-y-4 mb-6">
+            <div>
+              <p class="text-white/25 text-[10px] uppercase tracking-widest mb-2.5 font-semibold">Includes</p>
               <ul class="space-y-2">
-                {plan.notIncluded.map(f => (
-                  <li class="flex items-start gap-2 text-xs text-white/25">
-                    <svg class="w-3.5 h-3.5 mt-0.5 flex-shrink-0 text-white/20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                {plan.features.map(f => (
+                  <li class="flex items-start gap-2 text-xs text-white/65">
+                    <svg class={`w-3.5 h-3.5 mt-0.5 flex-shrink-0 ${plan.highlight ? 'text-[#4f8ef7]' : 'text-green-400/70'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
                     </svg>
                     {f}
                   </li>
                 ))}
               </ul>
+            </div>
+            {plan.notIncluded.length > 0 && (
+              <div>
+                <p class="text-white/20 text-[10px] uppercase tracking-widest mb-2.5 font-semibold">Not included</p>
+                <ul class="space-y-2">
+                  {plan.notIncluded.map(f => (
+                    <li class="flex items-start gap-2 text-xs text-white/25">
+                      <svg class="w-3.5 h-3.5 mt-0.5 flex-shrink-0 text-white/15" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                      </svg>
+                      {f}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             )}
           </div>
 
           <a href="/#contact"
-            class={`mt-6 block text-center py-3 rounded-xl text-sm font-bold transition-all duration-200 ${plan.highlight
+            class={`block text-center py-3 rounded-xl text-sm font-bold transition-all duration-200 hover:-translate-y-0.5 ${plan.highlight
               ? 'bg-gradient-to-r from-[#4f8ef7] to-[#7c3aed] text-white hover:opacity-90 shadow-lg shadow-[#4f8ef7]/25'
               : 'border border-white/20 text-white hover:border-white/40 hover:bg-white/5'}`}>
             {plan.cta} →
@@ -399,45 +555,43 @@ const pricingPlans = [
       ))}
     </div>
 
-    <p class="text-center text-white/25 text-sm">All website plans include: mobile optimization, performance optimization, basic SEO, and post-launch support. <a href="/#contact" class="text-[#4f8ef7] hover:underline">Talk to us</a> for custom requirements.</p>
+    <p class="text-center text-white/25 text-sm">
+      All website plans include: mobile optimization, performance optimization, basic SEO, and post-launch support.{' '}
+      <a href="/#contact" class="text-[#4f8ef7] hover:underline">Talk to us</a> for custom requirements.
+    </p>
   </div>
 </section>
 
-<!-- COMPARISON TABLE (desktop) -->
+<!-- ── COMPARISON TABLE ── -->
 <section class="py-16 px-6 bg-[#080c14]">
   <div class="max-w-5xl mx-auto">
-    <h3 class="text-2xl font-bold text-center mb-10">Website plan comparison</h3>
+    <div class="text-center mb-10 reveal">
+      <h3 class="text-2xl font-bold mb-2">Website plan comparison</h3>
+      <p class="text-white/40 text-sm">See exactly what's included at each tier</p>
+    </div>
     <div class="overflow-x-auto rounded-2xl border border-white/[0.08]">
       <table class="w-full text-sm">
         <thead>
           <tr class="border-b border-white/[0.08]">
-            <th class="text-left p-5 text-white/40 font-medium text-xs uppercase tracking-widest w-1/4">Feature</th>
-            <th class="p-5 text-center text-white/70 font-semibold">Starter</th>
-            <th class="p-5 text-center bg-[#4f8ef7]/[0.06] font-bold text-white border-x border-[#4f8ef7]/20">Professional</th>
-            <th class="p-5 text-center text-white/70 font-semibold">Premium</th>
+            <th class="text-left p-5 text-white/35 font-medium text-xs uppercase tracking-widest w-1/4">Feature</th>
+            <th class="p-5 text-center text-white/60 font-semibold text-sm">Starter<br /><span class="text-white/30 font-normal text-xs">$1,500</span></th>
+            <th class="p-5 text-center compare-col-highlight font-bold text-white border-x border-[#4f8ef7]/20 text-sm">Professional<br /><span class="text-[#4f8ef7] font-normal text-xs">$2,500</span></th>
+            <th class="p-5 text-center text-white/60 font-semibold text-sm">Premium<br /><span class="text-white/30 font-normal text-xs">$4,500+</span></th>
           </tr>
         </thead>
         <tbody>
-          {[
-            ['Pages', '1–3', '5–10', 'Unlimited'],
-            ['Delivery time', '3–5 days', '5–7 days', '10–14 days'],
-            ['Custom design', '✓', '✓', '✓'],
-            ['Mobile optimized', '✓', '✓', '✓'],
-            ['Basic SEO', '✓', '✓', '✓'],
-            ['Full SEO package', '—', '✓', '✓'],
-            ['Contact forms', '—', '✓', '✓'],
-            ['CMS / Blog', '—', 'Optional', '✓'],
-            ['E-commerce', '—', '—', '✓'],
-            ['Custom integrations', '—', '—', '✓'],
-            ['PageSpeed guarantee', '—', '90+', '90+'],
-            ['Post-launch support', '14 days', '30 days', '60 days'],
-            ['Price', '$1,500', '$2,500', '$4,500+'],
-          ].map(([feature, starter, pro, premium], i) => (
-            <tr class={`border-b border-white/[0.05] ${i % 2 === 0 ? '' : 'bg-white/[0.02]'}`}>
-              <td class="p-4 text-white/50 font-medium text-xs">{feature}</td>
-              <td class="p-4 text-center text-white/40 text-xs">{starter === '✓' ? <span class="text-green-400">✓</span> : starter === '—' ? <span class="text-white/15">—</span> : starter}</td>
-              <td class="p-4 text-center bg-[#4f8ef7]/[0.04] border-x border-[#4f8ef7]/20 text-xs font-medium">{pro === '✓' ? <span class="text-[#4f8ef7]">✓</span> : pro === '—' ? <span class="text-white/15">—</span> : pro}</td>
-              <td class="p-4 text-center text-white/40 text-xs">{premium === '✓' ? <span class="text-green-400">✓</span> : premium === '—' ? <span class="text-white/15">—</span> : premium}</td>
+          {comparisonRows.map(([feature, starter, pro, premium], i) => (
+            <tr class={`border-b border-white/[0.05] hover:bg-white/[0.02] transition-colors ${i === comparisonRows.length - 1 ? 'border-0 font-bold' : ''}`}>
+              <td class="p-4 text-white/50 text-xs font-medium">{feature}</td>
+              <td class="p-4 text-center text-xs text-white/45">
+                {starter === '✓' ? <span class="text-green-400 text-base leading-none">✓</span> : starter === '—' ? <span class="text-white/15">—</span> : <span>{starter}</span>}
+              </td>
+              <td class="p-4 text-center compare-col-highlight border-x border-[#4f8ef7]/15 text-xs font-medium">
+                {pro === '✓' ? <span class="text-[#4f8ef7] text-base leading-none">✓</span> : pro === '—' ? <span class="text-white/15">—</span> : <span class="text-white">{pro}</span>}
+              </td>
+              <td class="p-4 text-center text-xs text-white/45">
+                {premium === '✓' ? <span class="text-green-400 text-base leading-none">✓</span> : premium === '—' ? <span class="text-white/15">—</span> : <span>{premium}</span>}
+              </td>
             </tr>
           ))}
         </tbody>
@@ -446,25 +600,25 @@ const pricingPlans = [
   </div>
 </section>
 
-<!-- BOTTOM CTA -->
+<!-- ── BOTTOM CTA ── -->
 <section class="py-24 px-6 bg-[#0b0f1c]">
   <div class="max-w-4xl mx-auto text-center">
     <!-- Gradient border card -->
-    <div class="relative p-px rounded-3xl overflow-hidden" style="background: linear-gradient(135deg, #4f8ef7, #7c3aed, #f472b6)">
-      <div class="bg-[#0d1220] rounded-3xl px-8 py-14">
+    <div class="relative p-px rounded-3xl overflow-hidden" style="background: linear-gradient(135deg, #4f8ef7 0%, #7c3aed 50%, #f472b6 100%);">
+      <div class="bg-[#0d1220] rounded-3xl px-8 py-16">
         <p class="text-[#4f8ef7] text-xs font-semibold uppercase tracking-[0.3em] mb-3">Ready to start?</p>
         <h2 class="text-3xl md:text-5xl font-bold mb-4">Let's build something great</h2>
-        <p class="text-white/50 text-lg max-w-lg mx-auto mb-8 leading-relaxed">
+        <p class="text-white/50 text-lg max-w-lg mx-auto mb-10 leading-relaxed">
           Tell us what you need. We'll come back with a clear plan, realistic timeline, and honest pricing.
         </p>
 
         <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
           <a href="/#contact"
-            class="bg-gradient-to-r from-[#4f8ef7] to-[#7c3aed] hover:opacity-90 text-white px-8 py-4 rounded-xl font-bold text-base transition-all duration-200 shadow-xl shadow-[#4f8ef7]/30 hover:-translate-y-0.5">
+            class="bg-gradient-to-r from-[#4f8ef7] to-[#7c3aed] hover:opacity-90 text-white px-8 py-4 rounded-xl font-bold text-base transition-all duration-200 shadow-xl shadow-[#4f8ef7]/30 hover:-translate-y-1">
             Start a Project →
           </a>
           <a href="/#work"
-            class="border border-white/20 hover:border-white/40 hover:bg-white/5 text-white px-8 py-4 rounded-xl font-semibold text-base transition-all duration-200">
+            class="border border-white/20 hover:border-white/40 hover:bg-white/5 text-white px-8 py-4 rounded-xl font-semibold text-base transition-all duration-200 hover:-translate-y-0.5">
             View Our Work
           </a>
         </div>
@@ -481,7 +635,7 @@ const pricingPlans = [
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- ── FOOTER ── -->
 <footer class="py-10 px-6 border-t border-white/[0.06]">
   <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
     <div class="flex items-center gap-2.5">
@@ -498,7 +652,7 @@ const pricingPlans = [
 </footer>
 
 <script>
-  // Nav scroll effect
+  // ── Nav scroll (for if user somehow gets to top) ──
   const nav = document.getElementById('main-nav') as HTMLElement;
   function updateNav() {
     if (window.scrollY > 20) {
@@ -511,7 +665,58 @@ const pricingPlans = [
   }
   window.addEventListener('scroll', updateNav, { passive: true });
 
-  // FAQ accordion — handles all faq-item elements on the page
+  // ── Mobile menu ──
+  const menuBtn = document.getElementById('menu-btn') as HTMLElement;
+  const mobileMenu = document.getElementById('mobile-menu') as HTMLElement;
+
+  menuBtn.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.contains('open');
+    if (isOpen) {
+      mobileMenu.classList.remove('open');
+      mobileMenu.classList.add('hidden');
+      menuBtn.classList.remove('open');
+    } else {
+      mobileMenu.classList.remove('hidden');
+      requestAnimationFrame(() => mobileMenu.classList.add('open'));
+      menuBtn.classList.add('open');
+    }
+  });
+
+  mobileMenu.querySelectorAll('.mobile-nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      mobileMenu.classList.add('hidden');
+      menuBtn.classList.remove('open');
+    });
+  });
+
+  // ── Active anchor pill highlighting ──
+  const anchorPills = document.querySelectorAll('.anchor-pill');
+  const sectionIds = ['websites', 'marketing', 'consulting', 'pricing'];
+
+  function updateActivePill() {
+    const scrollY = window.scrollY + 140;
+    let activeId = '';
+
+    sectionIds.forEach(id => {
+      const el = document.getElementById(id);
+      if (el && el.offsetTop <= scrollY) activeId = id;
+    });
+
+    anchorPills.forEach(pill => {
+      const href = (pill as HTMLAnchorElement).getAttribute('href') || '';
+      if (href === `#${activeId}` || href === '#pricing' && activeId === 'pricing') {
+        pill.classList.add('active');
+      } else {
+        pill.classList.remove('active');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', updateActivePill, { passive: true });
+  updateActivePill();
+
+  // ── FAQ accordion ──
   document.querySelectorAll('.faq-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       const item = btn.closest('.faq-item') as HTMLElement;
@@ -519,7 +724,6 @@ const pricingPlans = [
       const icon = item.querySelector('.faq-icon') as HTMLElement;
       const isOpen = answer.style.maxHeight && answer.style.maxHeight !== '0px';
 
-      // Close all within the same parent FAQ list
       const parentList = item.parentElement;
       if (parentList) {
         parentList.querySelectorAll('.faq-answer').forEach((a: Element) => { (a as HTMLElement).style.maxHeight = '0px'; });
@@ -532,6 +736,20 @@ const pricingPlans = [
       }
     });
   });
+
+  // ── Scroll reveal ──
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.08 }
+  );
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 </script>
 
 </body>
