@@ -1,82 +1,105 @@
 ---
 import '../styles/global.css';
 
-const services = [
+const plans = [
   {
-    icon: '⚡',
-    name: 'AI Website Builds',
-    tagline: 'Premium sites. Delivered in days.',
-    desc: 'We build fast, beautiful, high-converting websites using AI-accelerated development. Same quality as a $20k agency — fraction of the cost and time.',
-    features: ['Delivered in 5–7 days', 'Performance-first (90+ PageSpeed)', 'SEO ready from day one', 'Fully custom — no templates'],
-    cta: 'See Our Work',
-    featured: true,
-  },
-  {
-    icon: '📈',
-    name: 'Digital Marketing',
-    tagline: 'Grow your audience. Drive revenue.',
-    desc: 'Google Ads, Meta campaigns, SEO, content strategy, and analytics that actually move the needle. We manage it, you watch the results.',
-    features: ['Google & Meta Ads', 'SEO & Content', 'Email Marketing', 'Analytics & Reporting'],
-    cta: 'Learn More',
-    featured: false,
-  },
-  {
-    icon: '🛠️',
-    name: 'IT Consulting',
-    tagline: 'Tech that works for your business.',
-    desc: 'From system architecture to software recommendations, we help businesses make smart technology decisions without the enterprise price tag.',
-    features: ['Tech Stack Audits', 'Process Automation', 'Software Integration', 'AI Implementation'],
+    name: 'Starter',
+    price: '$179',
+    firstMonth: '$399',
+    period: '/mo',
+    desc: 'Perfect for small businesses that need a professional web presence managed hands-free.',
+    features: [
+      '1 website included',
+      '10 AI content updates/mo',
+      'Text or email to update',
+      'Preview before publish',
+      'Hosting on Cloudflare CDN',
+      'Email support',
+    ],
     cta: 'Get Started',
-    featured: false,
+    popular: false,
+  },
+  {
+    name: 'Growth',
+    price: '$299',
+    firstMonth: '$599',
+    period: '/mo',
+    desc: 'For growing businesses that want unlimited updates and better visibility online.',
+    features: [
+      '1 website included',
+      'Unlimited AI content updates',
+      'Text or email to update',
+      'SEO dashboard access',
+      'Monthly performance report',
+      'Priority support',
+    ],
+    cta: 'Get Started',
+    popular: true,
+  },
+  {
+    name: 'Pro',
+    price: '$449',
+    firstMonth: '$899',
+    period: '/mo',
+    desc: 'Manage multiple locations or properties with a dedicated support team.',
+    features: [
+      'Up to 3 websites',
+      'Unlimited AI content updates',
+      'Custom integrations',
+      'Weekly strategy call',
+      'Phone support',
+      'Analytics dashboard',
+    ],
+    cta: 'Get Started',
+    popular: false,
+  },
+  {
+    name: 'Concierge',
+    price: '$899',
+    firstMonth: '$1,199',
+    period: '/mo',
+    desc: 'Full-service digital presence management. We handle everything.',
+    features: [
+      'Unlimited websites',
+      'Unlimited AI content updates',
+      'Full digital marketing',
+      'Dedicated account manager',
+      'Daily update monitoring',
+      'Custom everything',
+    ],
+    cta: 'Contact Us',
+    popular: false,
   },
 ];
 
-const process = [
-  { step: '01', title: 'Discovery Call', desc: 'We learn your business, goals, and what success looks like. 30 minutes, no fluff.' },
-  { step: '02', title: 'Strategy & Proposal', desc: 'You get a clear plan with scope, timeline, and pricing. No surprises.' },
-  { step: '03', title: 'Build & Launch', desc: 'We execute fast. Most websites go from brief to live in under 2 weeks.' },
-  { step: '04', title: 'Grow & Scale', desc: 'After launch, we help you market, optimize, and scale your digital presence.' },
+const steps = [
+  { num: '01', icon: '🏗️', title: 'We Build Your Site', desc: 'We design and build your website in 5–7 days. Real content, real images, fully custom — no templates.' },
+  { num: '02', icon: '📱', title: 'You Text the Changes', desc: 'Need to update your hours? Add a new menu item? Change a photo? Just text or email us what you want.' },
+  { num: '03', icon: '🤖', title: 'AI Drafts the Update', desc: 'Our AI generates the change and sends you a preview link so you can see exactly what it looks like.' },
+  { num: '04', icon: '✅', title: 'You Approve & It Goes Live', desc: 'Reply YES to publish. Reply NO to scrap it. Reply UNDO to roll back. You\'re always in control.' },
+  { num: '05', icon: '🔄', title: 'Repeat Forever', desc: 'Your site stays fresh, accurate, and up-to-date — automatically. No agency, no dev, no hassle.' },
 ];
 
-const work = [
-  { name: "Robbie's Marina", type: 'Tourism & Hospitality', url: 'https://robbies-marina-web-project.pages.dev', img: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&q=80&auto=format&fit=crop', result: '95/100 PageSpeed · 12 pages · Live in 1 day', tag: 'Website Build', metric: '95', metricLabel: 'PageSpeed' },
-  { name: 'Ciao Bella Islamorada', type: 'Salon & Spa', url: 'https://ciaobella-web.pages.dev', img: 'https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800&q=80&auto=format&fit=crop', result: 'Full rebrand · Real images · Booking integration', tag: 'Website + Branding', metric: '6', metricLabel: 'Days to launch' },
-  { name: 'DrinkElite', type: 'E-Commerce / DTC', url: 'https://drinkelite-frontend.pages.dev', img: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80&auto=format&fit=crop', result: 'Headless Shopify · Animated product pages · React', tag: 'E-Commerce', metric: '3x', metricLabel: 'Conv. rate lift' },
-];
-
-const testimonials = [
-  {
-    quote: "Consultably completely transformed how we show up online. Our old site was an embarrassment — now people actually DM us saying they found us through Google. We got 3 new bookings the first week after launch.",
-    name: "Marcus W.",
-    role: "Owner, Coastal Charters Co.",
-    avatar: "MW",
-    color: "from-blue-500 to-cyan-400",
-    result: "+3 bookings week 1",
-  },
-  {
-    quote: "I was skeptical about AI-built sites — thought it would look generic. I was completely wrong. They built something that actually reflects our brand. The whole process took 6 days and cost less than my old agency's retainer for one month.",
-    name: "Priya S.",
-    role: "Founder, Bloom Wellness Studio",
-    avatar: "PS",
-    color: "from-violet-500 to-purple-400",
-    result: "6 days, under budget",
-  },
-  {
-    quote: "The Google Ads management alone has paid for itself 4x over. They know what they're doing and they actually explain the strategy instead of hiding behind jargon. Refreshing to work with people who are straight with you.",
-    name: "Tom R.",
-    role: "CEO, Summit Roofing Group",
-    avatar: "TR",
-    color: "from-emerald-500 to-teal-400",
-    result: "4x ROAS achieved",
-  },
+const categories = [
+  'Restaurants & Cafes', 'Marinas & Charters', 'Salons & Spas', 'Real Estate', 'Medical & Dental',
+  'Law Firms', 'Contractors', 'Retail Shops', 'Hotels & B&Bs', 'Fitness Studios',
 ];
 
 const faqs = [
-  { q: 'How fast can you build a website?', a: 'Most sites are live within 5–7 business days. Complex builds with custom features or e-commerce take 2–3 weeks. We always give you a realistic timeline upfront.' },
-  { q: 'What does an AI website build cost?', a: 'Starter sites begin at $1,500. Most clients invest $2,500–$5,000 for a full multi-page site with SEO and performance optimization. Significantly less than traditional agencies.' },
-  { q: "Do I own the website after it's built?", a: "Yes — 100%. The code, the domain, the hosting account. Everything is yours. We don't lock you into proprietary systems." },
-  { q: 'What makes Consultably different from other agencies?', a: "Speed and quality, without the overhead. We use AI to accelerate the build process, which means faster delivery and lower cost — without sacrificing design or performance." },
-  { q: 'Can you manage my digital marketing after the site is built?', a: 'Absolutely. Many clients start with a website and then move into ongoing marketing retainers. We become an extension of your team.' },
+  { q: 'How do I send updates to my site?', a: 'Text or email your request in plain English — "Update our hours to Mon-Sat 9am-8pm" or "Add our new summer menu." The AI handles the rest.' },
+  { q: 'What kind of changes can I make?', a: 'Any content update: hours, photos, pricing, new pages, events, menus, team members, promotions. If it\'s on your site, you can update it.' },
+  { q: 'How long does the initial build take?', a: 'Most websites are live within 5–7 business days. More complex sites with custom features may take up to 2 weeks.' },
+  { q: 'What if I don\'t like a change?', a: 'Before anything goes live, you\'ll get a preview link. Reply NO and the change is discarded. Already live? Reply UNDO and we roll it back instantly.' },
+  { q: 'Can I cancel anytime?', a: 'Yes. No long-term contracts. Cancel anytime with 30 days notice. Your site and code are yours to keep.' },
+  { q: 'What\'s the difference between plans?', a: 'The main differences are the number of sites you can manage and your level of support. All plans include unlimited text/email updates except Starter (10/mo).' },
+  { q: 'Do I own my website?', a: 'Yes, 100%. The code, the domain, the content — all yours. We just manage and host it.' },
+  { q: 'What does the first month cost?', a: 'The first month is higher because it includes your website build. After that, you pay the standard monthly rate.' },
+];
+
+const work = [
+  { name: "Robbie's Marina", type: 'Tourism & Hospitality', url: 'https://robbies-marina-web-project.pages.dev', img: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&q=80&auto=format&fit=crop' },
+  { name: 'Ciao Bella Islamorada', type: 'Salon & Day Spa', url: 'https://ciaobella-web.pages.dev', img: 'https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800&q=80&auto=format&fit=crop' },
+  { name: "Smith's Plumbing", type: 'Trades & Services', url: 'https://smiths-plumbing-site.pages.dev', img: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80&auto=format&fit=crop' },
 ];
 ---
 
@@ -85,662 +108,225 @@ const faqs = [
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Consultably — AI-powered website builds, digital marketing, and IT consulting for modern businesses. Premium sites delivered in days, not months." />
-  <title>Consultably | AI Website Builds · Digital Marketing · IT Consulting</title>
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="description" content="Consultably — We build your website and keep it updated forever via text or email. AI-powered. No agency. No developer. From $179/mo." />
+  <title>Consultably | AI Website Management for Local Businesses</title>
+  <link rel="icon" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
-    /* ── Animations ── */
-    @keyframes gradient-shift {
-      0%, 100% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-    }
-    @keyframes float-slow {
-      0%, 100% { transform: translateY(0px) scale(1); }
-      50% { transform: translateY(-30px) scale(1.05); }
-    }
-    @keyframes float-medium {
-      0%, 100% { transform: translateY(0px) scale(1); }
-      50% { transform: translateY(20px) scale(0.95); }
-    }
-    @keyframes pulse-glow {
-      0%, 100% { opacity: 0.15; }
-      50% { opacity: 0.3; }
-    }
-    @keyframes shimmer {
-      0% { background-position: -200% center; }
-      100% { background-position: 200% center; }
-    }
-    @keyframes fade-up {
-      from { opacity: 0; transform: translateY(24px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes fade-in {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-    @keyframes stars-drift {
-      0%   { transform: translateY(0) translateX(0); }
-      100% { transform: translateY(-80px) translateX(20px); }
-    }
-    @keyframes twinkle-a {
-      0%, 100% { opacity: 0.08; } 50% { opacity: 0.35; }
-    }
-    @keyframes twinkle-b {
-      0%, 100% { opacity: 0.12; } 50% { opacity: 0.4; }
-    }
-    @keyframes twinkle-c {
-      0%, 100% { opacity: 0.05; } 50% { opacity: 0.25; }
-    }
-    @keyframes marquee {
-      0%   { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-    @keyframes slide-up {
-      from { opacity: 0; transform: translateY(12px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-
-    /* ── Hero gradient text ── */
-    .hero-gradient-text {
-      background: linear-gradient(135deg, #60a5fa, #a78bfa, #f472b6, #60a5fa);
-      background-size: 300% 300%;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      animation: gradient-shift 4s ease infinite;
-    }
-
-    /* ── Orbs ── */
-    .orb-1 { animation: float-slow 8s ease-in-out infinite; }
-    .orb-2 { animation: float-medium 6s ease-in-out infinite; }
-    .orb-3 { animation: pulse-glow 5s ease-in-out infinite; }
-
-    /* ── CSS particle star layers ── */
-    .stars-layer {
-      position: absolute; inset: 0;
-      pointer-events: none; overflow: hidden;
-    }
-    .stars-a {
-      background-image:
-        radial-gradient(circle, rgba(255,255,255,0.45) 1px, transparent 1px),
-        radial-gradient(circle, rgba(79,142,247,0.5) 1px, transparent 1px);
-      background-size: 240px 240px, 180px 180px;
-      background-position: 30px 20px, 120px 95px;
-      animation: twinkle-a 5s ease-in-out infinite, stars-drift 30s linear infinite;
-    }
-    .stars-b {
-      background-image:
-        radial-gradient(circle, rgba(167,139,250,0.4) 1px, transparent 1px),
-        radial-gradient(circle, rgba(244,114,182,0.35) 1px, transparent 1px);
-      background-size: 310px 310px, 200px 200px;
-      background-position: 160px 70px, 50px 180px;
-      animation: twinkle-b 7s ease-in-out infinite 1s, stars-drift 40s linear infinite reverse;
-    }
-    .stars-c {
-      background-image:
-        radial-gradient(circle, rgba(255,255,255,0.3) 1px, transparent 1px),
-        radial-gradient(circle, rgba(52,211,153,0.35) 1px, transparent 1px);
-      background-size: 150px 150px, 270px 270px;
-      background-position: 75px 130px, 200px 40px;
-      animation: twinkle-c 9s ease-in-out infinite 2s, stars-drift 50s linear infinite;
-    }
-
-    /* ── Card shimmer ── */
-    .card-shimmer {
-      background: linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.04) 50%, transparent 60%);
-      background-size: 200% 100%;
-      animation: shimmer 3s linear infinite;
-    }
-
-    /* ── Nav states ── */
-    .nav-scrolled {
-      background: rgba(8, 12, 20, 0.97) !important;
-      border-bottom-color: rgba(255,255,255,0.08) !important;
-      box-shadow: 0 4px 32px rgba(0,0,0,0.5);
-      backdrop-filter: blur(20px);
-    }
-    .nav-transparent {
-      background: transparent !important;
-      border-bottom-color: transparent !important;
-    }
-
-    /* ── Mobile nav ── */
-    #mobile-menu {
-      transition: opacity 0.25s ease, transform 0.25s ease;
-    }
-    #mobile-menu.hidden {
-      opacity: 0;
-      transform: translateY(-8px);
-      pointer-events: none;
-    }
-    #mobile-menu.open {
-      opacity: 1;
-      transform: translateY(0);
-      pointer-events: auto;
-    }
-    .hamburger-line {
-      display: block; width: 22px; height: 2px;
-      background: currentColor; border-radius: 2px;
-      transition: transform 0.25s ease, opacity 0.25s ease;
-    }
-    #menu-btn.open .hamburger-line:nth-child(1) { transform: translateY(6px) rotate(45deg); }
-    #menu-btn.open .hamburger-line:nth-child(2) { opacity: 0; }
-    #menu-btn.open .hamburger-line:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
-
-    /* ── Work cards ── */
-    .work-card { transition: transform 0.35s cubic-bezier(0.16,1,0.3,1), box-shadow 0.35s ease, border-color 0.35s ease; }
-    .work-card:hover { transform: translateY(-8px); }
-    .work-card:hover .work-overlay { opacity: 1; }
-    .work-card:hover .work-img { transform: scale(1.07); }
-    .work-card:hover .work-stat { animation: slide-up 0.3s ease forwards; }
-    .work-overlay { transition: opacity 0.4s ease; }
-    .work-img { transition: transform 0.7s cubic-bezier(0.16,1,0.3,1); }
-    .work-metric { transition: transform 0.3s ease, opacity 0.3s ease; }
-
-    /* ── Testimonials ── */
-    .testimonial-card {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .testimonial-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 24px 60px rgba(79, 142, 247, 0.1);
-    }
-
-    /* ── Press badges ── */
-    .press-badge { transition: all 0.3s ease; }
-    .press-badge:hover {
-      background: rgba(255,255,255,0.07);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
-    }
-
-    /* ── Press marquee ── */
-    .press-track { display: flex; width: max-content; animation: marquee 28s linear infinite; }
-    .press-track:hover { animation-play-state: paused; }
-    @media (min-width: 768px) {
-      .press-track { animation: none; }
-      .press-marquee { overflow: visible; }
-      .press-inner { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; }
-      .press-track { width: auto; }
-      .press-dupe { display: none; }
-    }
-
-    /* ── Service cards ── */
-    .service-card { transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; }
-    .service-card:hover { transform: translateY(-4px); }
-
-    /* ── Contact gradient border ── */
-    .contact-gradient-border {
-      position: relative;
-      background: linear-gradient(135deg, rgba(79,142,247,0.15), rgba(124,58,237,0.15));
-      border-radius: 24px;
-    }
-    .contact-gradient-border::before {
-      content: '';
-      position: absolute;
-      inset: -1px;
-      border-radius: 25px;
-      background: linear-gradient(135deg, rgba(79,142,247,0.4), rgba(124,58,237,0.4), rgba(244,114,182,0.2));
-      z-index: 0;
-      pointer-events: none;
-    }
-    .contact-gradient-border > * { position: relative; z-index: 1; }
-
-    /* ── Smooth scroll ── */
-    html { scroll-behavior: smooth; }
-
-    /* ── Fade-up reveal ── */
-    .reveal {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
+    body { font-family: 'Space Grotesk', sans-serif; }
+    .gradient-text { background: linear-gradient(135deg, #4f8ef7, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .gradient-btn { background: linear-gradient(135deg, #4f8ef7, #7c3aed); }
+    .gradient-btn:hover { opacity: 0.9; }
+    .card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
+    .fade-in { opacity: 0; transform: translateY(20px); transition: opacity .6s ease, transform .6s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
   </style>
 </head>
 <body class="bg-[#080c14] text-white">
 
-<!-- ── NAV ── -->
-<header id="main-nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 nav-transparent border-b border-transparent">
+<!-- NAV -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-[#080c14]/90 backdrop-blur-md border-b border-white/5">
   <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-    <a href="/" class="flex items-center gap-2.5 flex-shrink-0">
-      <div class="w-8 h-8 bg-gradient-to-br from-[#4f8ef7] to-[#7c3aed] rounded-lg flex items-center justify-center text-white font-bold text-sm shadow-lg shadow-[#4f8ef7]/30">C</div>
-      <span class="font-bold text-lg tracking-tight">Consultably</span>
+    <a href="/" class="flex items-center gap-2.5">
+      <div class="w-8 h-8 gradient-btn rounded-lg flex items-center justify-center font-bold text-sm">C</div>
+      <span class="font-bold text-lg">Consultably</span>
     </a>
-
     <nav class="hidden md:flex items-center gap-8">
-      {[['Services','/services'],['Work','#work'],['Process','#process'],['FAQ','#faq']].map(([l,h]) => (
-        <a href={h} class="text-white/55 hover:text-white text-sm font-medium transition-colors duration-200 relative group">
-          {l}
-          <span class="absolute -bottom-0.5 left-0 w-0 h-px bg-[#4f8ef7] group-hover:w-full transition-all duration-300"></span>
-        </a>
+      {[['How It Works','#how-it-works'],['Pricing','#pricing'],['Work','#work'],['FAQ','#faq']].map(([l,h]) => (
+        <a href={h} class="text-white/60 hover:text-white text-sm font-medium transition-colors">{l}</a>
       ))}
     </nav>
-
     <div class="flex items-center gap-3">
-      <a href="#contact"
-        class="hidden sm:flex items-center gap-1.5 bg-gradient-to-r from-[#4f8ef7] to-[#7c3aed] hover:opacity-90 text-white px-5 py-2.5 rounded-lg text-sm font-semibold transition-all shadow-lg shadow-[#4f8ef7]/20 hover:shadow-[#4f8ef7]/35 hover:-translate-y-0.5">
-        Get Started →
-      </a>
-      <!-- Hamburger -->
-      <button id="menu-btn" class="md:hidden flex flex-col gap-[5px] p-2 text-white/70 hover:text-white transition-colors" aria-label="Toggle menu">
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-      </button>
+      <a href="mailto:hello@consultably.co" class="hidden sm:block text-white/50 hover:text-white text-sm transition-colors">hello@consultably.co</a>
+      <a href="#pricing" class="gradient-btn text-white px-5 py-2 rounded-lg text-sm font-semibold transition-opacity">See Plans</a>
     </div>
-  </div>
-
-  <!-- Mobile menu -->
-  <div id="mobile-menu" class="hidden md:hidden bg-[#080c14]/98 backdrop-blur-xl border-b border-white/[0.08] px-6 pb-6 pt-2">
-    <nav class="flex flex-col gap-1">
-      {[['Services','/services'],['Work','#work'],['Process','#process'],['FAQ','#faq'],['Contact','#contact']].map(([l,h]) => (
-        <a href={h} class="mobile-nav-link py-3 text-white/60 hover:text-white text-base font-medium transition-colors border-b border-white/[0.05] last:border-0">{l}</a>
-      ))}
-    </nav>
-    <a href="#contact" class="mt-4 block text-center bg-gradient-to-r from-[#4f8ef7] to-[#7c3aed] text-white py-3.5 rounded-xl font-bold text-sm">
-      Start Your Project →
-    </a>
   </div>
 </header>
 
-<!-- ── HERO ── -->
-<section class="relative min-h-[100svh] flex items-center justify-center overflow-hidden">
-  <!-- Background grid -->
-  <div class="absolute inset-0 opacity-[0.12]" style="background-image: linear-gradient(rgba(79,142,247,0.18) 1px, transparent 1px), linear-gradient(90deg, rgba(79,142,247,0.18) 1px, transparent 1px); background-size: 60px 60px;"></div>
+<!-- HERO -->
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+  <div class="absolute inset-0 opacity-20" style="background-image: linear-gradient(rgba(79,142,247,0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(79,142,247,0.15) 1px, transparent 1px); background-size: 60px 60px;"></div>
+  <div class="absolute top-1/3 left-1/4 w-96 h-96 bg-[#4f8ef7]/15 rounded-full blur-[120px] pointer-events-none"></div>
+  <div class="absolute bottom-1/3 right-1/4 w-80 h-80 bg-[#7c3aed]/15 rounded-full blur-[100px] pointer-events-none"></div>
 
-  <!-- CSS particle star layers -->
-  <div class="stars-layer stars-a"></div>
-  <div class="stars-layer stars-b"></div>
-  <div class="stars-layer stars-c"></div>
-
-  <!-- Animated orbs -->
-  <div class="orb-1 absolute top-1/4 left-1/6 w-[600px] h-[600px] bg-[#4f8ef7]/12 rounded-full blur-[160px] pointer-events-none"></div>
-  <div class="orb-2 absolute bottom-1/4 right-1/6 w-[450px] h-[450px] bg-[#7c3aed]/12 rounded-full blur-[140px] pointer-events-none"></div>
-  <div class="orb-3 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] bg-[#f472b6]/6 rounded-full blur-[120px] pointer-events-none"></div>
-
-  <!-- Floating accent dots -->
-  <div class="absolute top-1/3 right-1/4 w-2 h-2 bg-[#4f8ef7] rounded-full opacity-40 animate-pulse"></div>
-  <div class="absolute bottom-1/3 left-1/4 w-1.5 h-1.5 bg-[#7c3aed] rounded-full opacity-30 animate-pulse" style="animation-delay:1s"></div>
-  <div class="absolute top-2/3 right-1/3 w-1 h-1 bg-[#f472b6] rounded-full opacity-50 animate-pulse" style="animation-delay:0.5s"></div>
-
-  <div class="relative z-10 max-w-5xl mx-auto px-6 text-center pt-32 pb-24">
-    <!-- Availability badge -->
-    <div class="inline-flex items-center gap-2 bg-white/[0.06] border border-white/[0.12] rounded-full px-4 py-1.5 text-xs font-medium text-white/70 mb-8 backdrop-blur-sm" style="animation: fade-in 0.5s ease forwards;">
-      <span class="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse flex-shrink-0"></span>
-      Now accepting new clients — limited spots available
+  <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
+    <div class="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-1.5 text-xs font-semibold text-white/60 mb-7">
+      <span class="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse"></span>
+      Now serving Florida Keys · South Florida · and beyond
     </div>
 
-    <!-- Main headline -->
-    <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-[6rem] xl:text-[6.5rem] font-bold mb-6 leading-[1.0] tracking-tight" style="animation: fade-up 0.6s ease 0.1s both;">
-      Your business deserves<br />
-      <span class="hero-gradient-text">a better website</span>
+    <h1 class="text-5xl md:text-7xl font-bold mb-5 leading-[1.05] tracking-tight">
+      Your website,<br />
+      <span class="gradient-text">managed by AI</span>
     </h1>
 
-    <p class="text-white/55 text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed font-normal" style="animation: fade-up 0.6s ease 0.2s both;">
-      We build fast, premium, AI-accelerated websites for businesses that want to look exceptional and perform even better. Same-week delivery. Fraction of agency cost.
+    <p class="text-white/60 text-lg md:text-xl mb-4 max-w-2xl mx-auto leading-relaxed">
+      We build your site in 5–7 days. Then you manage it forever by text or email. AI handles every update — no agency, no developer, no hassle.
     </p>
 
-    <!-- CTAs -->
-    <div class="flex flex-col sm:flex-row gap-4 justify-center mb-16" style="animation: fade-up 0.6s ease 0.3s both;">
-      <a href="#contact"
-        class="group bg-gradient-to-r from-[#4f8ef7] to-[#7c3aed] hover:opacity-90 text-white px-8 py-4 rounded-xl font-bold text-base transition-all duration-200 shadow-xl shadow-[#4f8ef7]/30 hover:shadow-[#4f8ef7]/50 hover:-translate-y-1">
-        Start Your Project
-        <span class="inline-block ml-1 group-hover:translate-x-1 transition-transform">→</span>
+    <p class="text-white/40 text-base mb-10">
+      Starting at <span class="text-white font-bold">$179/mo</span> after your first month build.
+    </p>
+
+    <div class="flex flex-col sm:flex-row gap-4 justify-center mb-14">
+      <a href="#pricing" class="gradient-btn text-white px-8 py-4 rounded-lg font-bold text-base transition-opacity shadow-lg shadow-[#4f8ef7]/20">
+        See Pricing & Plans →
       </a>
-      <a href="#work"
-        class="border border-white/[0.18] hover:border-white/40 hover:bg-white/5 text-white px-8 py-4 rounded-xl font-semibold text-base transition-all duration-200 backdrop-blur-sm hover:-translate-y-0.5">
-        See Our Work
+      <a href="#how-it-works" class="border border-white/20 hover:border-white/40 text-white px-8 py-4 rounded-lg font-semibold text-base transition-colors">
+        How It Works
       </a>
     </div>
 
-    <!-- Stats strip -->
-    <div class="flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm text-white/40 font-medium" style="animation: fade-up 0.6s ease 0.4s both;">
-      <span class="flex items-center gap-1.5"><span class="text-green-400">⚡</span>5–7 day delivery</span>
-      <span class="text-white/15 hidden sm:block">·</span>
-      <span class="flex items-center gap-1.5"><span class="text-blue-400">🎯</span>90+ PageSpeed scores</span>
-      <span class="text-white/15 hidden sm:block">·</span>
-      <span class="flex items-center gap-1.5"><span class="text-violet-400">💰</span>From $1,500</span>
-      <span class="text-white/15 hidden sm:block">·</span>
-      <span class="flex items-center gap-1.5"><span class="text-emerald-400">✅</span>You own everything</span>
+    <!-- Demo update flow -->
+    <div class="max-w-lg mx-auto bg-white/4 border border-white/10 rounded-2xl p-5 text-left">
+      <p class="text-white/30 text-xs font-semibold uppercase tracking-widest mb-3">Example update</p>
+      <div class="space-y-3">
+        <div class="flex gap-3">
+          <div class="w-7 h-7 bg-blue-500/20 rounded-full flex items-center justify-center text-xs flex-shrink-0 mt-0.5">👤</div>
+          <div class="bg-white/8 rounded-xl rounded-tl-none px-4 py-2.5 text-sm text-white/80">"Update our hours — we're now open Sundays 10am to 6pm"</div>
+        </div>
+        <div class="flex gap-3 justify-end">
+          <div class="bg-[#4f8ef7]/20 rounded-xl rounded-tr-none px-4 py-2.5 text-sm text-white/80">Done! Preview: <span class="text-[#4f8ef7] underline">preview.yoursite.com/hours</span> — reply YES to publish or NO to cancel</div>
+          <div class="w-7 h-7 bg-[#4f8ef7]/20 rounded-full flex items-center justify-center text-xs flex-shrink-0 mt-0.5">🤖</div>
+        </div>
+        <div class="flex gap-3">
+          <div class="w-7 h-7 bg-blue-500/20 rounded-full flex items-center justify-center text-xs flex-shrink-0 mt-0.5">👤</div>
+          <div class="bg-white/8 rounded-xl rounded-tl-none px-4 py-2.5 text-sm text-white/80">"YES"</div>
+        </div>
+        <div class="flex gap-3 justify-end">
+          <div class="bg-green-500/15 rounded-xl rounded-tr-none px-4 py-2.5 text-sm text-green-300">✅ Live! Your hours are updated on your website.</div>
+          <div class="w-7 h-7 bg-[#4f8ef7]/20 rounded-full flex items-center justify-center text-xs flex-shrink-0 mt-0.5">🤖</div>
+        </div>
+      </div>
     </div>
-  </div>
-
-  <!-- Scroll indicator -->
-  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 opacity-25">
-    <div class="w-px h-10 bg-gradient-to-b from-transparent to-white/70"></div>
-    <span class="text-xs tracking-[0.2em] uppercase">Scroll</span>
   </div>
 </section>
 
-<!-- ── FEATURED IN / PRESS ── -->
-<section class="py-14 px-6 border-y border-white/[0.06] bg-[#080c14] overflow-hidden">
-  <div class="max-w-5xl mx-auto">
-    <p class="text-center text-white/25 text-xs font-semibold uppercase tracking-[0.3em] mb-8">As seen in &amp; trusted by</p>
-
-    <!-- Marquee on mobile, flex-wrap on desktop -->
-    <div class="press-marquee overflow-hidden">
-      <div class="press-track gap-3 md:gap-5">
-        <!-- Original set -->
-        {[
-          { icon: <svg width="18" height="18" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#22d3ee"/></svg>, label: 'TechCrunch' },
-          { icon: <svg width="56" height="16" viewBox="0 0 56 16"><text x="28" y="13" text-anchor="middle" font-family="Georgia,serif" font-size="12" font-weight="bold" fill="#d4a017">FORBES</text></svg>, label: 'Forbes' },
-          { icon: <svg width="32" height="18" viewBox="0 0 40 20"><rect x="1" y="1" width="38" height="18" rx="3" fill="#e31937" opacity="0.18"/><text x="20" y="15" text-anchor="middle" font-family="Arial Black,sans-serif" font-size="11" font-weight="900" fill="#e31937">INC.</text></svg>, label: 'Inc. Magazine' },
-          { icon: <svg width="22" height="22" viewBox="0 0 24 24"><rect width="24" height="24" rx="5" fill="#ff6600" opacity="0.18"/><text x="12" y="17" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#ff6600">Y</text></svg>, label: 'Y Combinator' },
-          { icon: <svg width="22" height="22" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#4f8ef7" opacity="0.15"/><text x="12" y="16" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" font-weight="bold" fill="#4f8ef7">ENT</text></svg>, label: 'Entrepreneur' },
-          { icon: <svg width="22" height="22" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#da552f" opacity="0.18"/><text x="12.5" y="17" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#da552f">▲</text></svg>, label: 'Product Hunt' },
-        ].map(b => (
-          <div class="press-badge flex-shrink-0 flex items-center gap-2 bg-white/[0.04] border border-white/[0.08] rounded-xl px-5 py-3 cursor-default mx-2 md:mx-0">
-            {b.icon}
-            <span class="font-bold text-sm text-white/75 tracking-tight whitespace-nowrap">{b.label}</span>
-          </div>
-        ))}
-        <!-- Duplicate set for seamless marquee (hidden on desktop) -->
-        {[
-          { icon: <svg width="18" height="18" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#22d3ee"/></svg>, label: 'TechCrunch' },
-          { icon: <svg width="56" height="16" viewBox="0 0 56 16"><text x="28" y="13" text-anchor="middle" font-family="Georgia,serif" font-size="12" font-weight="bold" fill="#d4a017">FORBES</text></svg>, label: 'Forbes' },
-          { icon: <svg width="32" height="18" viewBox="0 0 40 20"><rect x="1" y="1" width="38" height="18" rx="3" fill="#e31937" opacity="0.18"/><text x="20" y="15" text-anchor="middle" font-family="Arial Black,sans-serif" font-size="11" font-weight="900" fill="#e31937">INC.</text></svg>, label: 'Inc. Magazine' },
-          { icon: <svg width="22" height="22" viewBox="0 0 24 24"><rect width="24" height="24" rx="5" fill="#ff6600" opacity="0.18"/><text x="12" y="17" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#ff6600">Y</text></svg>, label: 'Y Combinator' },
-          { icon: <svg width="22" height="22" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#4f8ef7" opacity="0.15"/><text x="12" y="16" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" font-weight="bold" fill="#4f8ef7">ENT</text></svg>, label: 'Entrepreneur' },
-          { icon: <svg width="22" height="22" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#da552f" opacity="0.18"/><text x="12.5" y="17" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#da552f">▲</text></svg>, label: 'Product Hunt' },
-        ].map(b => (
-          <div class="press-dupe press-badge flex-shrink-0 flex items-center gap-2 bg-white/[0.04] border border-white/[0.08] rounded-xl px-5 py-3 cursor-default mx-2">
-            {b.icon}
-            <span class="font-bold text-sm text-white/75 tracking-tight whitespace-nowrap">{b.label}</span>
-          </div>
-        ))}
-      </div>
+<!-- WHO IT'S FOR -->
+<section class="py-12 px-6 bg-white/2 border-y border-white/5">
+  <div class="max-w-5xl mx-auto text-center">
+    <p class="text-white/30 text-xs font-semibold uppercase tracking-widest mb-5">Built for local businesses in every category</p>
+    <div class="flex flex-wrap justify-center gap-2">
+      {categories.map(c => (
+        <span class="bg-white/5 border border-white/10 text-white/60 text-xs font-medium px-3 py-1.5 rounded-full">{c}</span>
+      ))}
     </div>
+  </div>
+</section>
 
-    <!-- Desktop: centred static layout -->
-    <div class="hidden md:flex flex-wrap justify-center items-center gap-4 mt-2">
-      {[
-        { icon: <svg width="18" height="18" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#22d3ee"/></svg>, label: 'TechCrunch' },
-        { icon: <svg width="56" height="16" viewBox="0 0 56 16"><text x="28" y="13" text-anchor="middle" font-family="Georgia,serif" font-size="12" font-weight="bold" fill="#d4a017">FORBES</text></svg>, label: 'Forbes' },
-        { icon: <svg width="32" height="18" viewBox="0 0 40 20"><rect x="1" y="1" width="38" height="18" rx="3" fill="#e31937" opacity="0.18"/><text x="20" y="15" text-anchor="middle" font-family="Arial Black,sans-serif" font-size="11" font-weight="900" fill="#e31937">INC.</text></svg>, label: 'Inc. Magazine' },
-        { icon: <svg width="22" height="22" viewBox="0 0 24 24"><rect width="24" height="24" rx="5" fill="#ff6600" opacity="0.18"/><text x="12" y="17" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#ff6600">Y</text></svg>, label: 'Y Combinator' },
-        { icon: <svg width="22" height="22" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#4f8ef7" opacity="0.15"/><text x="12" y="16" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" font-weight="bold" fill="#4f8ef7">ENT</text></svg>, label: 'Entrepreneur' },
-        { icon: <svg width="22" height="22" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#da552f" opacity="0.18"/><text x="12.5" y="17" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#da552f">▲</text></svg>, label: 'Product Hunt' },
-      ].map(b => (
-        <div class="press-badge flex items-center gap-2 bg-white/[0.04] border border-white/[0.08] rounded-xl px-5 py-3 cursor-default">
-          {b.icon}
-          <span class="font-bold text-sm text-white/75 tracking-tight">{b.label}</span>
+<!-- HOW IT WORKS -->
+<section class="py-24 px-6" id="how-it-works">
+  <div class="max-w-5xl mx-auto">
+    <div class="text-center mb-16">
+      <p class="text-[#4f8ef7] text-xs font-semibold uppercase tracking-[0.3em] mb-3">The Process</p>
+      <h2 class="text-4xl md:text-5xl font-bold mb-4">Simple. Fast. No drama.</h2>
+      <p class="text-white/50 text-lg max-w-xl mx-auto">You text. AI updates. Your site stays current forever.</p>
+    </div>
+    <div class="space-y-4">
+      {steps.map((s, i) => (
+        <div class="flex gap-6 items-start p-6 bg-white/3 border border-white/8 rounded-2xl hover:border-[#4f8ef7]/30 transition-all duration-300 card-hover fade-in">
+          <div class="text-4xl flex-shrink-0">{s.icon}</div>
+          <div class="flex-1">
+            <div class="flex items-center gap-3 mb-2">
+              <span class="text-white/20 font-bold text-sm">{s.num}</span>
+              <h3 class="text-lg font-bold">{s.title}</h3>
+            </div>
+            <p class="text-white/50 text-sm leading-relaxed">{s.desc}</p>
+          </div>
         </div>
       ))}
     </div>
   </div>
 </section>
 
-<!-- ── SERVICES ── -->
-<section class="py-28 px-6" id="services">
-  <div class="max-w-7xl mx-auto">
-    <div class="text-center mb-16 reveal">
-      <p class="text-[#4f8ef7] text-xs font-semibold uppercase tracking-[0.3em] mb-3">What We Do</p>
-      <h2 class="text-4xl md:text-5xl font-bold mb-4">Services built for results</h2>
-      <p class="text-white/50 text-lg max-w-xl mx-auto">Everything your business needs to compete online — without the bloated agency retainer.</p>
+<!-- PRICING -->
+<section class="py-24 px-6 bg-[#0c1220]" id="pricing">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-16">
+      <p class="text-[#4f8ef7] text-xs font-semibold uppercase tracking-[0.3em] mb-3">Pricing</p>
+      <h2 class="text-4xl md:text-5xl font-bold mb-4">One price. Everything included.</h2>
+      <p class="text-white/50 text-lg max-w-xl mx-auto">First month includes your website build. After that, just the monthly management fee.</p>
     </div>
 
-    <div class="grid md:grid-cols-3 gap-6">
-      {services.map(s => (
-        <div class={`service-card relative rounded-2xl p-8 flex flex-col group ${s.featured
-          ? 'bg-gradient-to-br from-[#4f8ef7]/[0.12] to-[#7c3aed]/[0.12] border border-[#4f8ef7]/40 shadow-xl shadow-[#4f8ef7]/10'
-          : 'bg-white/[0.04] border border-white/10 hover:border-white/25 hover:shadow-xl hover:shadow-white/5'} transition-all duration-300`}>
-          {s.featured && (
-            <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-[#4f8ef7] to-[#7c3aed] text-white text-xs font-bold px-5 py-1.5 rounded-full uppercase tracking-widest shadow-lg shadow-[#4f8ef7]/30 whitespace-nowrap">
-              Most Popular
-            </div>
-          )}
-          <div class={`w-12 h-12 rounded-xl flex items-center justify-center text-2xl mb-6 ${s.featured ? 'bg-[#4f8ef7]/20' : 'bg-white/[0.06]'}`}>{s.icon}</div>
-          <h3 class="text-2xl font-bold mb-1">{s.name}</h3>
-          <p class={`text-sm font-semibold mb-4 ${s.featured ? 'text-[#4f8ef7]' : 'text-white/40'}`}>{s.tagline}</p>
-          <p class="text-white/55 text-sm leading-relaxed mb-6 flex-1">{s.desc}</p>
-          <ul class="space-y-2.5 mb-8">
-            {s.features.map(f => (
-              <li class="flex items-center gap-2.5 text-sm text-white/70">
-                <svg class={`w-4 h-4 flex-shrink-0 ${s.featured ? 'text-[#4f8ef7]' : 'text-white/30'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
-                </svg>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+      {plans.map(p => (
+        <div class={`relative rounded-2xl p-7 flex flex-col card-hover fade-in transition-all duration-300 ${p.popular ? 'bg-gradient-to-br from-[#4f8ef7]/20 to-[#7c3aed]/20 border-2 border-[#4f8ef7]/50' : 'bg-white/4 border border-white/10'}`}>
+          {p.popular && <div class="absolute -top-3 left-1/2 -translate-x-1/2 gradient-btn text-white text-xs font-bold px-4 py-1 rounded-full uppercase tracking-widest">Most Popular</div>}
+          <h3 class="font-bold text-lg mb-1">{p.name}</h3>
+          <div class="mb-1">
+            <span class="text-3xl font-bold">{p.price}</span>
+            <span class="text-white/40 text-sm">{p.period}</span>
+          </div>
+          <p class="text-white/30 text-xs mb-4">First month: <span class="text-[#4f8ef7]">{p.firstMonth}</span> (includes build)</p>
+          <p class="text-white/50 text-xs leading-relaxed mb-5 flex-1">{p.desc}</p>
+          <ul class="space-y-2 mb-6">
+            {p.features.map(f => (
+              <li class="flex items-center gap-2 text-xs text-white/70">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#4f8ef7] flex-shrink-0"></span>
                 {f}
               </li>
             ))}
           </ul>
-          <a href={s.featured ? '#work' : '#contact'}
-            class={`text-center py-3.5 rounded-xl text-sm font-bold transition-all duration-200 ${s.featured
-              ? 'bg-gradient-to-r from-[#4f8ef7] to-[#7c3aed] text-white hover:opacity-90 shadow-lg shadow-[#4f8ef7]/25 hover:shadow-[#4f8ef7]/40 hover:-translate-y-0.5'
-              : 'border border-white/20 text-white hover:border-white/40 hover:bg-white/5'}`}>
-            {s.cta} →
+          <a href="mailto:hello@consultably.co?subject=I'm interested in the " + p.name + " plan"
+            class={`text-center py-3 rounded-lg text-sm font-bold transition-all ${p.popular ? 'gradient-btn text-white hover:opacity-90' : 'border border-white/20 text-white hover:border-white/40'}`}>
+            {p.cta}
           </a>
         </div>
       ))}
     </div>
 
-    <div class="text-center mt-10">
-      <a href="/services" class="inline-flex items-center gap-2 text-white/40 hover:text-white/70 text-sm transition-colors duration-200 group">
-        View detailed service breakdown &amp; pricing
-        <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-      </a>
+    <div class="bg-white/3 border border-white/8 rounded-2xl p-6 text-center">
+      <p class="text-white/40 text-sm">All plans include: Custom-built website · Cloudflare CDN hosting · SSL certificate · Mobile optimized · SEO-ready · 30-day rollback history</p>
     </div>
   </div>
 </section>
 
-<!-- ── WORK / PORTFOLIO ── -->
-<section class="py-28 px-6 bg-[#0b0f1c]" id="work">
-  <div class="max-w-7xl mx-auto">
-    <div class="text-center mb-16 reveal">
-      <p class="text-[#4f8ef7] text-xs font-semibold uppercase tracking-[0.3em] mb-3">Portfolio</p>
-      <h2 class="text-4xl md:text-5xl font-bold mb-4">Recent builds</h2>
-      <p class="text-white/50 text-lg max-w-xl mx-auto">Real projects. Real results. All built with our AI-accelerated process.</p>
+<!-- WORK -->
+<section class="py-24 px-6" id="work">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-14">
+      <p class="text-[#4f8ef7] text-xs font-semibold uppercase tracking-[0.3em] mb-3">Recent Builds</p>
+      <h2 class="text-4xl md:text-5xl font-bold mb-4">See what we build</h2>
+      <p class="text-white/50 text-lg max-w-xl mx-auto">Every site is custom-built, fast, and beautiful. These went live in under a week.</p>
     </div>
-
     <div class="grid md:grid-cols-3 gap-6">
       {work.map(w => (
         <a href={w.url} target="_blank" rel="noopener"
-          class="work-card group block bg-[#0d1526] border border-white/[0.08] hover:border-[#4f8ef7]/50 rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-[#4f8ef7]/15">
-          <!-- Image container -->
-          <div class="relative h-56 overflow-hidden">
-            <img src={w.img} alt={w.name} class="work-img w-full h-full object-cover" loading="lazy" />
-
-            <!-- Gradient overlay always present for readability -->
-            <div class="absolute inset-0 bg-gradient-to-t from-[#0d1526] via-transparent to-transparent opacity-70"></div>
-
-            <!-- Hover overlay with CTA -->
-            <div class="work-overlay absolute inset-0 bg-[#080c14]/80 backdrop-blur-sm opacity-0 flex flex-col items-center justify-center gap-3">
-              <div class="w-12 h-12 rounded-full border-2 border-white/30 flex items-center justify-center">
-                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-              </div>
-              <span class="text-white text-sm font-semibold">View Live Site</span>
-            </div>
-
-            <!-- Tag badge -->
-            <div class="absolute top-3 left-3 bg-[#080c14]/80 backdrop-blur-sm border border-white/10 rounded-lg px-3 py-1.5">
-              <span class="text-xs font-semibold text-[#4f8ef7]">{w.tag}</span>
-            </div>
-
-            <!-- Metric badge -->
-            <div class="absolute top-3 right-3 bg-[#4f8ef7]/20 backdrop-blur-sm border border-[#4f8ef7]/30 rounded-lg px-3 py-1.5 text-center">
-              <div class="text-sm font-bold text-white leading-none">{w.metric}</div>
-              <div class="text-[10px] text-white/60 leading-none mt-0.5 whitespace-nowrap">{w.metricLabel}</div>
-            </div>
+          class="group block bg-white/4 border border-white/10 hover:border-[#4f8ef7]/40 rounded-2xl overflow-hidden card-hover transition-all duration-300 fade-in">
+          <div class="h-48 overflow-hidden">
+            <img src={w.img} alt={w.name} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
           </div>
-
-          <div class="p-6">
-            <p class="text-white/40 text-xs font-medium uppercase tracking-wider mb-1.5">{w.type}</p>
-            <h3 class="text-lg font-bold mb-3 group-hover:text-[#4f8ef7] transition-colors duration-200">{w.name}</h3>
-            <div class="flex items-start gap-2">
-              <div class="w-1.5 h-1.5 rounded-full bg-green-400 mt-1.5 flex-shrink-0"></div>
-              <p class="text-white/40 text-xs leading-relaxed">{w.result}</p>
-            </div>
+          <div class="p-5">
+            <p class="text-[#4f8ef7] text-xs font-semibold uppercase tracking-wider mb-1">{w.type}</p>
+            <h3 class="font-bold group-hover:text-[#4f8ef7] transition-colors">{w.name}</h3>
+            <p class="text-white/30 text-xs mt-1">View live site →</p>
           </div>
         </a>
       ))}
     </div>
-
-    <div class="text-center mt-12">
-      <p class="text-white/35 text-sm">More projects available on request · <a href="#contact" class="text-[#4f8ef7] hover:underline">Get in touch</a></p>
-    </div>
   </div>
 </section>
 
-<!-- ── TESTIMONIALS ── -->
-<section class="py-28 px-6 bg-[#080c14]">
-  <div class="max-w-7xl mx-auto">
-    <div class="text-center mb-16 reveal">
-      <p class="text-[#4f8ef7] text-xs font-semibold uppercase tracking-[0.3em] mb-3">Testimonials</p>
-      <h2 class="text-4xl md:text-5xl font-bold mb-4">What our clients say</h2>
-      <p class="text-white/50 text-lg max-w-xl mx-auto">We let the results speak. These are real words from real business owners.</p>
-    </div>
-
-    <div class="grid md:grid-cols-3 gap-6">
-      {testimonials.map(t => (
-        <div class="testimonial-card relative bg-white/[0.03] border border-white/[0.08] rounded-2xl p-7 flex flex-col overflow-hidden">
-          <!-- Decorative gradient accent top -->
-          <div class={`absolute top-0 left-0 right-0 h-px bg-gradient-to-r ${t.color} opacity-40`}></div>
-
-          <!-- Large decorative quote mark -->
-          <div class="absolute top-5 right-6 opacity-[0.07]">
-            <svg width="48" height="40" viewBox="0 0 48 40" fill="white">
-              <path d="M0 40V24.667C0 11.022 8 3.022 24 0l3.333 5.333C20.444 7.111 16.444 10.667 16 16h8V40H0zm28 0V24.667C28 11.022 36 3.022 52 0l3.333 5.333C48.444 7.111 44.444 10.667 44 16h8V40H28z"/>
-            </svg>
-          </div>
-
-          <!-- Stars -->
-          <div class="flex gap-0.5 mb-5">
-            {Array(5).fill(null).map(() => (
-              <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-              </svg>
-            ))}
-          </div>
-
-          <!-- Quote -->
-          <blockquote class="text-white/65 text-sm leading-relaxed flex-1 mb-6 relative z-10">
-            "{t.quote}"
-          </blockquote>
-
-          <!-- Result pill -->
-          <div class={`inline-flex items-center gap-1.5 self-start bg-gradient-to-r ${t.color} bg-opacity-10 border border-white/10 rounded-full px-3 py-1 mb-5`} style="background: rgba(255,255,255,0.05);">
-            <span class="w-1.5 h-1.5 rounded-full bg-green-400"></span>
-            <span class="text-xs font-semibold text-white/70">{t.result}</span>
-          </div>
-
-          <!-- Author -->
-          <div class="flex items-center gap-3 pt-5 border-t border-white/[0.08]">
-            <div class={`w-10 h-10 rounded-full bg-gradient-to-br ${t.color} flex items-center justify-center text-white font-bold text-xs flex-shrink-0 shadow-lg`}>
-              {t.avatar}
-            </div>
-            <div>
-              <p class="font-semibold text-sm">{t.name}</p>
-              <p class="text-white/40 text-xs">{t.role}</p>
-            </div>
-          </div>
-        </div>
-      ))}
-    </div>
-
-    <!-- Social proof strip -->
-    <div class="mt-12 flex flex-wrap justify-center gap-8 text-center">
-      {[
-        { val: '50+', label: 'Projects delivered' },
-        { val: '4.9★', label: 'Average rating' },
-        { val: '< 7 days', label: 'Avg. delivery time' },
-        { val: '100%', label: 'Client ownership' },
-      ].map(stat => (
-        <div>
-          <p class="text-2xl font-bold text-white">{stat.val}</p>
-          <p class="text-white/35 text-xs mt-0.5">{stat.label}</p>
-        </div>
-      ))}
-    </div>
-  </div>
-</section>
-
-<!-- ── PROCESS ── -->
-<section class="py-28 px-6 bg-[#0b0f1c]" id="process">
-  <div class="max-w-5xl mx-auto">
-    <div class="text-center mb-16 reveal">
-      <p class="text-[#4f8ef7] text-xs font-semibold uppercase tracking-[0.3em] mb-3">How It Works</p>
-      <h2 class="text-4xl md:text-5xl font-bold mb-4">Simple. Fast. No drama.</h2>
-      <p class="text-white/50 text-lg max-w-xl mx-auto">Our process is built to move quickly without cutting corners.</p>
-    </div>
-
-    <div class="grid md:grid-cols-2 gap-5">
-      {process.map((p, i) => (
-        <div class="group flex gap-5 p-7 bg-white/[0.03] border border-white/[0.08] rounded-2xl hover:border-[#4f8ef7]/30 hover:bg-[#4f8ef7]/[0.04] transition-all duration-300">
-          <div class="text-5xl font-bold text-white/[0.07] flex-shrink-0 leading-none group-hover:text-[#4f8ef7]/20 transition-colors">{p.step}</div>
-          <div>
-            <h3 class="text-lg font-bold mb-2 group-hover:text-[#4f8ef7] transition-colors duration-200">{p.title}</h3>
-            <p class="text-white/45 text-sm leading-relaxed">{p.desc}</p>
-          </div>
-        </div>
-      ))}
-    </div>
-  </div>
-</section>
-
-<!-- ── PRICING TEASER ── -->
-<section class="py-28 px-6 bg-[#080c14]">
-  <div class="max-w-4xl mx-auto text-center">
-    <p class="text-[#4f8ef7] text-xs font-semibold uppercase tracking-[0.3em] mb-3">Pricing</p>
-    <h2 class="text-4xl md:text-5xl font-bold mb-4">Transparent pricing.</h2>
-    <p class="text-white/50 text-lg mb-14 max-w-xl mx-auto">No surprise invoices. No hourly billing games. Clear scope, clear price.</p>
-
-    <div class="grid sm:grid-cols-3 gap-4 mb-10">
-      {[
-        { name: 'Starter', price: '$1,500', desc: 'Single page or simple brochure site. Perfect for getting online fast.', pages: '1–3 pages', delivery: '3–5 days', popular: false },
-        { name: 'Professional', price: '$2,500', desc: 'Full multi-page site with SEO, performance optimization, and contact forms.', pages: '5–10 pages', delivery: '5–7 days', popular: true },
-        { name: 'Premium', price: '$4,500+', desc: 'Complex builds — e-commerce, booking systems, custom integrations.', pages: 'Unlimited', delivery: '10–14 days', popular: false },
-      ].map(p => (
-        <div class={`rounded-2xl p-7 text-left relative transition-all duration-300 ${p.popular ? 'bg-gradient-to-br from-[#4f8ef7]/[0.12] to-[#7c3aed]/[0.12] border border-[#4f8ef7]/40 shadow-xl shadow-[#4f8ef7]/10 -translate-y-2' : 'bg-white/[0.04] border border-white/[0.08] hover:border-white/20 hover:-translate-y-1'}`}>
-          {p.popular && <p class="text-[#4f8ef7] text-xs font-bold uppercase tracking-widest mb-3">Most Popular</p>}
-          <h3 class="font-bold text-lg mb-1">{p.name}</h3>
-          <p class="text-3xl font-bold mb-3">{p.price}</p>
-          <p class="text-white/50 text-sm mb-5 leading-relaxed">{p.desc}</p>
-          <div class="space-y-2 text-xs text-white/40">
-            <div class="flex items-center gap-2">
-              <svg class="w-3.5 h-3.5 text-white/25" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-              {p.pages}
-            </div>
-            <div class="flex items-center gap-2">
-              <svg class="w-3.5 h-3.5 text-white/25" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-              {p.delivery} delivery
-            </div>
-          </div>
-          {p.popular && (
-            <a href="#contact" class="mt-5 block text-center bg-gradient-to-r from-[#4f8ef7] to-[#7c3aed] text-white py-2.5 rounded-xl text-sm font-bold hover:opacity-90 transition-opacity hover:-translate-y-0.5 transition-transform">
-              Get Started →
-            </a>
-          )}
-        </div>
-      ))}
-    </div>
-    <p class="text-white/25 text-sm mb-4">All plans include: hosting setup, domain config, mobile optimization, basic SEO, 30-day support.</p>
-    <a href="/services#pricing" class="inline-flex items-center gap-2 text-[#4f8ef7] hover:text-[#4f8ef7]/80 text-sm font-medium transition-colors group">
-      View full pricing breakdown
-      <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-    </a>
-  </div>
-</section>
-
-<!-- ── FAQ ── -->
-<section class="py-28 px-6 bg-[#0b0f1c]" id="faq">
+<!-- FAQ -->
+<section class="py-24 px-6 bg-[#0c1220]" id="faq">
   <div class="max-w-3xl mx-auto">
     <div class="text-center mb-14">
       <p class="text-[#4f8ef7] text-xs font-semibold uppercase tracking-[0.3em] mb-3">FAQ</p>
       <h2 class="text-4xl font-bold">Common questions</h2>
     </div>
     <div class="space-y-3" id="faq-list">
-      {faqs.map((f, i) => (
-        <div class="bg-white/[0.03] border border-white/[0.08] hover:border-white/[0.15] rounded-xl overflow-hidden faq-item transition-colors duration-200">
-          <button class="w-full text-left px-6 py-5 flex items-center justify-between gap-4 faq-btn">
+      {faqs.map(f => (
+        <div class="bg-white/4 border border-white/10 rounded-xl overflow-hidden faq-item">
+          <button class="w-full text-left px-6 py-5 flex items-center justify-between gap-4 faq-btn hover:bg-white/2 transition-colors">
             <span class="font-semibold text-sm md:text-base">{f.q}</span>
-            <div class="w-6 h-6 rounded-full border border-white/20 flex items-center justify-center flex-shrink-0">
-              <svg class="w-3 h-3 text-white/50 faq-icon transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 5v14M5 12h14"/>
-              </svg>
-            </div>
+            <svg class="w-5 h-5 text-white/30 flex-shrink-0 faq-icon transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v14M5 12h14"/>
+            </svg>
           </button>
-          <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-            <p class="px-6 pb-6 text-white/50 text-sm leading-relaxed">{f.a}</p>
+          <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+            <p class="px-6 pb-5 text-white/50 text-sm leading-relaxed">{f.a}</p>
           </div>
         </div>
       ))}
@@ -748,199 +334,46 @@ const faqs = [
   </div>
 </section>
 
-<!-- ── CONTACT / CTA ── -->
-<section class="py-28 px-6 bg-[#080c14]" id="contact">
-  <div class="max-w-5xl mx-auto">
-    <div class="text-center mb-16">
-      <p class="text-[#4f8ef7] text-xs font-semibold uppercase tracking-[0.3em] mb-3">Let's Build Together</p>
-      <h2 class="text-4xl md:text-5xl font-bold mb-4">Ready to get started?</h2>
-      <p class="text-white/50 text-lg max-w-xl mx-auto">Tell us about your project. We'll respond within 24 hours with a clear plan and honest pricing.</p>
-    </div>
-
-    <!-- Gradient border wrapper -->
-    <div class="relative p-px rounded-3xl" style="background: linear-gradient(135deg, rgba(79,142,247,0.35) 0%, rgba(124,58,237,0.35) 50%, rgba(244,114,182,0.2) 100%);">
-      <div class="bg-[#0a0e1a] rounded-3xl p-8 md:p-10">
-        <div class="grid md:grid-cols-5 gap-10 items-start">
-          <!-- Left: trust signals -->
-          <div class="md:col-span-2 space-y-4">
-            <h3 class="font-bold text-lg mb-6">Why work with us</h3>
-            <div class="space-y-3">
-              {[
-                { icon: '💬', text: 'No commitment — just a conversation' },
-                { icon: '📋', text: 'Clear scope and pricing upfront' },
-                { icon: '⚡', text: 'Most projects live in under 2 weeks' },
-                { icon: '🔐', text: 'You own 100% of everything we build' },
-                { icon: '🎯', text: '90+ PageSpeed on every project' },
-              ].map(item => (
-                <div class="flex items-center gap-3.5 p-4 bg-white/[0.04] border border-white/[0.07] rounded-xl hover:border-white/15 transition-colors">
-                  <span class="text-xl flex-shrink-0">{item.icon}</span>
-                  <span class="text-white/60 text-sm">{item.text}</span>
-                </div>
-              ))}
-            </div>
-
-            <!-- Response time badge -->
-            <div class="flex items-center gap-3 p-4 bg-green-500/[0.08] border border-green-500/20 rounded-xl mt-4">
-              <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse flex-shrink-0"></span>
-              <span class="text-green-400 text-sm font-medium">Typical response: under 4 hours</span>
-            </div>
-          </div>
-
-          <!-- Right: form -->
-          <form class="md:col-span-3 space-y-5"
-            action="https://formspree.io/f/consultably" method="POST">
-            <div class="grid sm:grid-cols-2 gap-4">
-              <div>
-                <label class="block text-xs font-semibold uppercase tracking-widest text-white/35 mb-2">Name *</label>
-                <input type="text" name="name" required
-                  class="w-full bg-white/[0.05] border border-white/[0.1] rounded-xl px-4 py-3.5 text-sm text-white placeholder-white/20 focus:outline-none focus:border-[#4f8ef7]/60 focus:bg-white/[0.08] transition-all duration-200"
-                  placeholder="Your name" />
-              </div>
-              <div>
-                <label class="block text-xs font-semibold uppercase tracking-widest text-white/35 mb-2">Email *</label>
-                <input type="email" name="email" required
-                  class="w-full bg-white/[0.05] border border-white/[0.1] rounded-xl px-4 py-3.5 text-sm text-white placeholder-white/20 focus:outline-none focus:border-[#4f8ef7]/60 focus:bg-white/[0.08] transition-all duration-200"
-                  placeholder="you@company.com" />
-              </div>
-            </div>
-            <div class="grid sm:grid-cols-2 gap-4">
-              <div>
-                <label class="block text-xs font-semibold uppercase tracking-widest text-white/35 mb-2">Service *</label>
-                <select name="service" required
-                  class="w-full bg-white/[0.05] border border-white/[0.1] rounded-xl px-4 py-3.5 text-sm text-white/70 focus:outline-none focus:border-[#4f8ef7]/60 transition-all duration-200 appearance-none cursor-pointer">
-                  <option value="">Select a service...</option>
-                  <option>AI Website Build</option>
-                  <option>Digital Marketing</option>
-                  <option>IT Consulting</option>
-                  <option>Full Package</option>
-                </select>
-              </div>
-              <div>
-                <label class="block text-xs font-semibold uppercase tracking-widest text-white/35 mb-2">Budget Range</label>
-                <select name="budget"
-                  class="w-full bg-white/[0.05] border border-white/[0.1] rounded-xl px-4 py-3.5 text-sm text-white/70 focus:outline-none focus:border-[#4f8ef7]/60 transition-all duration-200 appearance-none cursor-pointer">
-                  <option value="">Select budget...</option>
-                  <option>Under $1,500</option>
-                  <option>$1,500 – $3,000</option>
-                  <option>$3,000 – $6,000</option>
-                  <option>$6,000+</option>
-                </select>
-              </div>
-            </div>
-            <div>
-              <label class="block text-xs font-semibold uppercase tracking-widest text-white/35 mb-2">Tell us about your project *</label>
-              <textarea name="message" required rows="4"
-                class="w-full bg-white/[0.05] border border-white/[0.1] rounded-xl px-4 py-3.5 text-sm text-white placeholder-white/20 focus:outline-none focus:border-[#4f8ef7]/60 focus:bg-white/[0.08] transition-all duration-200 resize-none"
-                placeholder="What are you building? What's your timeline? What does success look like for you?"></textarea>
-            </div>
-            <button type="submit"
-              class="w-full bg-gradient-to-r from-[#4f8ef7] to-[#7c3aed] hover:opacity-90 text-white py-4 rounded-xl font-bold text-sm tracking-wide transition-all duration-200 shadow-xl shadow-[#4f8ef7]/25 hover:shadow-[#4f8ef7]/40 hover:-translate-y-0.5">
-              Send Message →
-            </button>
-            <p class="text-white/20 text-xs text-center">We respond within 24 hours. Usually much faster.</p>
-          </form>
-        </div>
-      </div>
-    </div>
+<!-- CTA -->
+<section class="py-24 px-6">
+  <div class="max-w-2xl mx-auto text-center">
+    <h2 class="text-4xl md:text-5xl font-bold mb-4">Ready to get started?</h2>
+    <p class="text-white/50 text-lg mb-8">Email us your business name and category. We'll send you a brief form and have your site live within a week.</p>
+    <a href="mailto:hello@consultably.co?subject=I want a website"
+      class="gradient-btn text-white px-10 py-4 rounded-lg font-bold text-lg inline-block transition-opacity shadow-xl shadow-[#4f8ef7]/20 hover:opacity-90">
+      Email Us to Get Started →
+    </a>
+    <p class="text-white/30 text-sm mt-4">Or text <span class="text-white">(555) 000-0000</span> · We respond same day</p>
   </div>
 </section>
 
-<!-- ── FOOTER ── -->
-<footer class="py-12 px-6 border-t border-white/[0.06]">
-  <div class="max-w-7xl mx-auto">
-    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 mb-10">
-      <div>
-        <div class="flex items-center gap-2.5 mb-2">
-          <div class="w-8 h-8 bg-gradient-to-br from-[#4f8ef7] to-[#7c3aed] rounded-lg flex items-center justify-center text-white font-bold text-sm">C</div>
-          <span class="font-bold text-base">Consultably</span>
-        </div>
-        <p class="text-white/30 text-xs max-w-xs leading-relaxed">AI-powered websites, digital marketing, and IT consulting for modern businesses.</p>
-      </div>
-      <div class="flex flex-wrap gap-x-10 gap-y-3 text-sm">
-        <div>
-          <p class="text-white/20 text-xs uppercase tracking-widest mb-2">Services</p>
-          <div class="space-y-1.5">
-            <a href="/services" class="block text-white/45 hover:text-white text-sm transition-colors">AI Website Builds</a>
-            <a href="/services#marketing" class="block text-white/45 hover:text-white text-sm transition-colors">Digital Marketing</a>
-            <a href="/services#consulting" class="block text-white/45 hover:text-white text-sm transition-colors">IT Consulting</a>
-          </div>
-        </div>
-        <div>
-          <p class="text-white/20 text-xs uppercase tracking-widest mb-2">Company</p>
-          <div class="space-y-1.5">
-            <a href="#work" class="block text-white/45 hover:text-white text-sm transition-colors">Portfolio</a>
-            <a href="#process" class="block text-white/45 hover:text-white text-sm transition-colors">Process</a>
-            <a href="#contact" class="block text-white/45 hover:text-white text-sm transition-colors">Contact</a>
-          </div>
-        </div>
-      </div>
+<!-- FOOTER -->
+<footer class="py-10 px-6 border-t border-white/5">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="flex items-center gap-2">
+      <div class="w-7 h-7 gradient-btn rounded-lg flex items-center justify-center font-bold text-xs">C</div>
+      <span class="font-bold">Consultably</span>
+      <span class="text-white/20 text-xs ml-2">© {new Date().getFullYear()}</span>
     </div>
-    <div class="border-t border-white/[0.05] pt-6 flex flex-col sm:flex-row justify-between items-center gap-3">
-      <span class="text-white/20 text-xs">© {new Date().getFullYear()} Consultably. All rights reserved.</span>
-      <div class="flex gap-5 text-xs text-white/20">
-        <a href="#" class="hover:text-white/50 transition-colors">Privacy Policy</a>
-        <a href="#" class="hover:text-white/50 transition-colors">Terms of Service</a>
-      </div>
+    <div class="flex gap-6 text-xs text-white/30">
+      <a href="#how-it-works" class="hover:text-white transition-colors">How It Works</a>
+      <a href="#pricing" class="hover:text-white transition-colors">Pricing</a>
+      <a href="#faq" class="hover:text-white transition-colors">FAQ</a>
+      <a href="mailto:hello@consultably.co" class="hover:text-white transition-colors">hello@consultably.co</a>
     </div>
   </div>
 </footer>
 
 <script>
-  // ── Nav scroll effect ──────────────────────────────────────────────────
-  const nav = document.getElementById('main-nav') as HTMLElement;
-
-  function updateNav() {
-    if (window.scrollY > 60) {
-      nav.classList.remove('nav-transparent');
-      nav.classList.add('nav-scrolled');
-    } else {
-      nav.classList.add('nav-transparent');
-      nav.classList.remove('nav-scrolled');
-    }
-  }
-
-  updateNav();
-  window.addEventListener('scroll', updateNav, { passive: true });
-
-  // ── Mobile hamburger menu ──────────────────────────────────────────────
-  const menuBtn = document.getElementById('menu-btn') as HTMLElement;
-  const mobileMenu = document.getElementById('mobile-menu') as HTMLElement;
-
-  menuBtn.addEventListener('click', () => {
-    const isOpen = mobileMenu.classList.contains('open');
-    if (isOpen) {
-      mobileMenu.classList.remove('open');
-      mobileMenu.classList.add('hidden');
-      menuBtn.classList.remove('open');
-    } else {
-      mobileMenu.classList.remove('hidden');
-      requestAnimationFrame(() => {
-        mobileMenu.classList.add('open');
-      });
-      menuBtn.classList.add('open');
-    }
-  });
-
-  // Close mobile menu when a link is clicked
-  mobileMenu.querySelectorAll('.mobile-nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-      mobileMenu.classList.remove('open');
-      mobileMenu.classList.add('hidden');
-      menuBtn.classList.remove('open');
-    });
-  });
-
-  // ── FAQ accordion ──────────────────────────────────────────────────────
+  // FAQ accordion
   document.querySelectorAll('.faq-btn').forEach(btn => {
     btn.addEventListener('click', () => {
-      const item = btn.closest('.faq-item') as HTMLElement;
-      const answer = item.querySelector('.faq-answer') as HTMLElement;
-      const icon = item.querySelector('.faq-icon') as HTMLElement;
+      const item = btn.closest('.faq-item');
+      const answer = item.querySelector('.faq-answer');
+      const icon = item.querySelector('.faq-icon');
       const isOpen = answer.style.maxHeight && answer.style.maxHeight !== '0px';
-
-      document.querySelectorAll('.faq-answer').forEach((a: Element) => { (a as HTMLElement).style.maxHeight = '0px'; });
-      document.querySelectorAll('.faq-icon').forEach((ic: Element) => { (ic as HTMLElement).style.transform = ''; });
-
+      document.querySelectorAll('.faq-answer').forEach(a => a.style.maxHeight = '0px');
+      document.querySelectorAll('.faq-icon').forEach(i => i.style.transform = '');
       if (!isOpen) {
         answer.style.maxHeight = answer.scrollHeight + 'px';
         icon.style.transform = 'rotate(45deg)';
@@ -948,19 +381,11 @@ const faqs = [
     });
   });
 
-  // ── Scroll reveal ──────────────────────────────────────────────────────
-  const revealObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          revealObserver.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.1 }
-  );
-  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+  // Scroll reveal
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 </script>
 
 </body>
